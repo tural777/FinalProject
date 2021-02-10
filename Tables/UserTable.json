@@ -2,12 +2,12 @@
     {
         "birthDate": "a",
         "code": "a",
-        "confirmPassword": "a",
+        "confirmPassword": "",
         "name": "a",
-        "password": "a",
+        "password": "",
         "role": "Admin",
         "surname": "a",
-        "username": "a"
+        "username": ""
     },
     {
         "birthDate": "m",

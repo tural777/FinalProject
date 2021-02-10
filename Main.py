@@ -151,7 +151,7 @@ class AdminMainPage(QWidget):
 
         self.ui.tableWidget.setItem(0, 0, header) 
         
-        width = int(self.ui.tableWidget.width() / columnCount)
+        width = int(self.ui.tableWidget.width() / columnCount / 1.001)
 
         for col in range(columnCount):
             self.ui.tableWidget.setColumnWidth(col, width)
@@ -281,7 +281,7 @@ class ImportantNoticesPage(QWidget):
         self.ui.tableWidget.horizontalHeader().setStyleSheet('font: 75 18pt "Comic Sans MS";')
 
 
-        width = int(self.ui.tableWidget.width() / columnCount)
+        width = int(self.ui.tableWidget.width() / columnCount / 1.002)
 
         for col in range(columnCount):
             self.ui.tableWidget.setColumnWidth(col, width)
@@ -341,7 +341,7 @@ class MemberMainPage(QWidget):
         header.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
         self.ui.tableWidget.setItem(0, 0, header) 
         
-        width = int(self.ui.tableWidget.width() / columnCount)
+        width = int(self.ui.tableWidget.width() / columnCount / 1.001)
 
         for col in range(columnCount):
             self.ui.tableWidget.setColumnWidth(col, width)

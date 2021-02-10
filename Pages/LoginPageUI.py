@@ -83,7 +83,7 @@ class Ui_Login(object):
 "}")
         self.btn_sigIn.setObjectName("btn_sigIn")
         self.horizontalLayoutWidget = QtWidgets.QWidget(Login)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(200, 230, 451, 117))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(170, 230, 451, 117))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
