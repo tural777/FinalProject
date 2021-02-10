@@ -29,7 +29,7 @@ class Ui_AdminMain(object):
         font.setBold(True)
         font.setWeight(75)
         self.lbl_title.setFont(font)
-        self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
         self.btn_deleteLesson = QtWidgets.QPushButton(AdminMain)
         self.btn_deleteLesson.setGeometry(QtCore.QRect(30, 525, 180, 50))
@@ -42,8 +42,8 @@ class Ui_AdminMain(object):
         self.btn_deleteLesson.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
-"    color: red;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
 "    color: #FFFFFF;\n"
@@ -67,7 +67,7 @@ class Ui_AdminMain(object):
         self.btn_addLesson.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -95,7 +95,7 @@ class Ui_AdminMain(object):
         self.btn_addNotice.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -115,6 +115,7 @@ class Ui_AdminMain(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(14)
         self.tableWidget.setFont(font)
+        self.tableWidget.setStyleSheet("")
         self.tableWidget.setFrameShape(QtWidgets.QFrame.Panel)
         self.tableWidget.setTabKeyNavigation(True)
         self.tableWidget.setAlternatingRowColors(True)

@@ -29,7 +29,7 @@ class Ui_Login(object):
         font.setBold(True)
         font.setWeight(75)
         self.lbl_title.setFont(font)
-        self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
         self.btn_register = QtWidgets.QPushButton(Login)
         self.btn_register.setGeometry(QtCore.QRect(30, 525, 180, 50))
@@ -42,7 +42,7 @@ class Ui_Login(object):
         self.btn_register.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -67,7 +67,7 @@ class Ui_Login(object):
         self.btn_sigIn.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -82,28 +82,54 @@ class Ui_Login(object):
 "}")
         self.btn_sigIn.setObjectName("btn_sigIn")
         self.horizontalLayoutWidget = QtWidgets.QWidget(Login)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(160, 230, 491, 117))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(200, 230, 451, 117))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(30)
+        self.horizontalLayout.setSpacing(15)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setSpacing(2)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lbl_username = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.lbl_username.setFont(font)
         self.lbl_username.setObjectName("lbl_username")
         self.verticalLayout.addWidget(self.lbl_username)
         self.lbl_password = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.lbl_password.setFont(font)
         self.lbl_password.setObjectName("lbl_password")
         self.verticalLayout.addWidget(self.lbl_password)
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_username = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_username.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_username.setObjectName("txt_username")
         self.verticalLayout_2.addWidget(self.txt_username)
         self.txt_password = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_password.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_password.setObjectName("txt_password")
         self.verticalLayout_2.addWidget(self.txt_password)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -118,7 +144,7 @@ class Ui_Login(object):
         self.btn_back.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"

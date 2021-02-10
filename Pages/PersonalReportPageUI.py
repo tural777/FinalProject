@@ -32,7 +32,7 @@ class Ui_PersonalReport(object):
         self.btn_back.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -47,38 +47,76 @@ class Ui_PersonalReport(object):
 "}")
         self.btn_back.setObjectName("btn_back")
         self.horizontalLayoutWidget = QtWidgets.QWidget(PersonalReport)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(120, 100, 561, 406))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(110, 100, 591, 406))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(9)
+        self.horizontalLayout.setSpacing(15)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setSpacing(3)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lbl_lastClassAtt = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_lastClassAtt.setFont(font)
         self.lbl_lastClassAtt.setObjectName("lbl_lastClassAtt")
         self.verticalLayout.addWidget(self.lbl_lastClassAtt)
         self.lbl_TotNumOfClsAttThisMonth = QtWidgets.QLabel(self.horizontalLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
         self.lbl_TotNumOfClsAttThisMonth.setFont(font)
         self.lbl_TotNumOfClsAttThisMonth.setObjectName("lbl_TotNumOfClsAttThisMonth")
         self.verticalLayout.addWidget(self.lbl_TotNumOfClsAttThisMonth)
         self.lbl_totalMonthlyFee = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_totalMonthlyFee.setFont(font)
         self.lbl_totalMonthlyFee.setObjectName("lbl_totalMonthlyFee")
         self.verticalLayout.addWidget(self.lbl_totalMonthlyFee)
         self.lbl_inputHeight = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_inputHeight.setFont(font)
         self.lbl_inputHeight.setObjectName("lbl_inputHeight")
         self.verticalLayout.addWidget(self.lbl_inputHeight)
         self.lbl_inputWeight = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_inputWeight.setFont(font)
         self.lbl_inputWeight.setObjectName("lbl_inputWeight")
         self.verticalLayout.addWidget(self.lbl_inputWeight)
         self.lbl_BMI = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_BMI.setFont(font)
         self.lbl_BMI.setObjectName("lbl_BMI")
         self.verticalLayout.addWidget(self.lbl_BMI)
         self.lbl_targetBMI = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_targetBMI.setFont(font)
         self.lbl_targetBMI.setStyleSheet("color: rgb(170, 0, 0);")
         self.lbl_targetBMI.setObjectName("lbl_targetBMI")
         self.verticalLayout.addWidget(self.lbl_targetBMI)
@@ -88,24 +126,66 @@ class Ui_PersonalReport(object):
         self.verticalLayout_2.setSpacing(8)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_lastClassAtt = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_lastClassAtt.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_lastClassAtt.setObjectName("txt_lastClassAtt")
         self.verticalLayout_2.addWidget(self.txt_lastClassAtt)
         self.txt_TotNumOfClsAttThisMonth = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_TotNumOfClsAttThisMonth.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_TotNumOfClsAttThisMonth.setObjectName("txt_TotNumOfClsAttThisMonth")
         self.verticalLayout_2.addWidget(self.txt_TotNumOfClsAttThisMonth)
         self.txt_totalMonthlyFee = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_totalMonthlyFee.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_totalMonthlyFee.setObjectName("txt_totalMonthlyFee")
         self.verticalLayout_2.addWidget(self.txt_totalMonthlyFee)
         self.txt_inputHeight = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_inputHeight.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_inputHeight.setObjectName("txt_inputHeight")
         self.verticalLayout_2.addWidget(self.txt_inputHeight)
         self.txt_inputWeight = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_inputWeight.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_inputWeight.setObjectName("txt_inputWeight")
         self.verticalLayout_2.addWidget(self.txt_inputWeight)
         self.txt_BMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_BMI.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_BMI.setObjectName("txt_BMI")
         self.verticalLayout_2.addWidget(self.txt_BMI)
         self.txt_targetBMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_targetBMI.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_targetBMI.setObjectName("txt_targetBMI")
         self.verticalLayout_2.addWidget(self.txt_targetBMI)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -117,7 +197,7 @@ class Ui_PersonalReport(object):
         font.setBold(True)
         font.setWeight(75)
         self.lbl_title.setFont(font)
-        self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
 
         self.retranslateUi(PersonalReport)

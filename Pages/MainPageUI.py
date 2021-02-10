@@ -27,10 +27,12 @@ class Ui_Main(object):
         self.centralwidget = QtWidgets.QWidget(Main)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(310, 290, 201, 121))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(310, 290, 191, 121))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(7)
         self.verticalLayout.setObjectName("verticalLayout")
         self.btn_admin = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
@@ -42,7 +44,7 @@ class Ui_Main(object):
         self.btn_admin.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -72,7 +74,7 @@ class Ui_Main(object):
         self.btn_member.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -88,12 +90,14 @@ class Ui_Main(object):
         self.btn_member.setObjectName("btn_member")
         self.verticalLayout.addWidget(self.btn_member)
         self.lbl_login = QtWidgets.QLabel(self.centralwidget)
-        self.lbl_login.setGeometry(QtCore.QRect(320, 180, 171, 91))
+        self.lbl_login.setGeometry(QtCore.QRect(320, 180, 181, 91))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(40)
+        font.setBold(True)
+        font.setWeight(75)
         self.lbl_login.setFont(font)
-        self.lbl_login.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_login.setStyleSheet("color: #9E9E9E;")
         self.lbl_login.setObjectName("lbl_login")
         self.lbl_title = QtWidgets.QLabel(self.centralwidget)
         self.lbl_title.setGeometry(QtCore.QRect(60, 60, 681, 81))

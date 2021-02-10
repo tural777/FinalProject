@@ -29,59 +29,144 @@ class Ui_Registration(object):
         font.setBold(True)
         font.setWeight(75)
         self.lbl_title.setFont(font)
-        self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
         self.horizontalLayoutWidget = QtWidgets.QWidget(Registration)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(100, 110, 591, 375))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(90, 110, 641, 389))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(15)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.lbl_name = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_name.setFont(font)
         self.lbl_name.setObjectName("lbl_name")
         self.verticalLayout.addWidget(self.lbl_name)
         self.lbl_surname = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_surname.setFont(font)
         self.lbl_surname.setObjectName("lbl_surname")
         self.verticalLayout.addWidget(self.lbl_surname)
         self.lbl_birthDate = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_birthDate.setFont(font)
         self.lbl_birthDate.setObjectName("lbl_birthDate")
         self.verticalLayout.addWidget(self.lbl_birthDate)
         self.lbl_code = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_code.setFont(font)
         self.lbl_code.setObjectName("lbl_code")
         self.verticalLayout.addWidget(self.lbl_code)
         self.lbl_username = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_username.setFont(font)
         self.lbl_username.setObjectName("lbl_username")
         self.verticalLayout.addWidget(self.lbl_username)
         self.lbl_password = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_password.setFont(font)
         self.lbl_password.setObjectName("lbl_password")
         self.verticalLayout.addWidget(self.lbl_password)
         self.lbl_confirmPass = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_confirmPass.setFont(font)
         self.lbl_confirmPass.setObjectName("lbl_confirmPass")
         self.verticalLayout.addWidget(self.lbl_confirmPass)
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_name = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_name.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_name.setObjectName("txt_name")
         self.verticalLayout_2.addWidget(self.txt_name)
         self.txt_surname = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_surname.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_surname.setObjectName("txt_surname")
         self.verticalLayout_2.addWidget(self.txt_surname)
         self.txt_birthDate = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_birthDate.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_birthDate.setObjectName("txt_birthDate")
         self.verticalLayout_2.addWidget(self.txt_birthDate)
         self.txt_code = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_code.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_code.setObjectName("txt_code")
         self.verticalLayout_2.addWidget(self.txt_code)
         self.txt_username = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_username.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_username.setObjectName("txt_username")
         self.verticalLayout_2.addWidget(self.txt_username)
         self.txt_password = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_password.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_password.setObjectName("txt_password")
         self.verticalLayout_2.addWidget(self.txt_password)
         self.txt_confirmPass = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_confirmPass.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_confirmPass.setObjectName("txt_confirmPass")
         self.verticalLayout_2.addWidget(self.txt_confirmPass)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -96,7 +181,7 @@ class Ui_Registration(object):
         self.btn_submit.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -121,7 +206,7 @@ class Ui_Registration(object):
         self.btn_back.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"

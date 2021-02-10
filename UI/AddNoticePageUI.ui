@@ -41,10 +41,21 @@
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="lbl_date">
+        <property name="font">
+         <font>
+          <family>Palatino Linotype</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>Date:</string>
         </property>
@@ -52,6 +63,14 @@
       </item>
       <item>
        <widget class="QLabel" name="lbl_notice">
+        <property name="font">
+         <font>
+          <family>Palatino Linotype</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>Notice:</string>
         </property>
@@ -62,10 +81,28 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QLineEdit" name="txt_date"/>
+       <widget class="QLineEdit" name="txt_date">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+}</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="txt_notice"/>
+       <widget class="QLineEdit" name="txt_notice">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+}</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -89,7 +126,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(85, 170, 255);</string>
+    <string notr="true">color: #9E9E9E;</string>
    </property>
    <property name="text">
     <string>Add a Notice</string>
@@ -118,7 +155,7 @@
     <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{
@@ -159,7 +196,7 @@ QPushButton:checked{
     <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{

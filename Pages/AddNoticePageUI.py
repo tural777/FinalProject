@@ -26,22 +26,47 @@ class Ui_AddNotice(object):
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(15)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.lbl_date = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_date.setFont(font)
         self.lbl_date.setObjectName("lbl_date")
         self.verticalLayout.addWidget(self.lbl_date)
         self.lbl_notice = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_notice.setFont(font)
         self.lbl_notice.setObjectName("lbl_notice")
         self.verticalLayout.addWidget(self.lbl_notice)
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_date = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_date.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_date.setObjectName("txt_date")
         self.verticalLayout_2.addWidget(self.txt_date)
         self.txt_notice = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_notice.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
         self.txt_notice.setObjectName("txt_notice")
         self.verticalLayout_2.addWidget(self.txt_notice)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -53,7 +78,7 @@ class Ui_AddNotice(object):
         font.setBold(True)
         font.setWeight(75)
         self.lbl_title.setFont(font)
-        self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
         self.btn_back = QtWidgets.QPushButton(AddNotice)
         self.btn_back.setGeometry(QtCore.QRect(400, 525, 180, 50))
@@ -66,7 +91,7 @@ class Ui_AddNotice(object):
         self.btn_back.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -91,7 +116,7 @@ class Ui_AddNotice(object):
         self.btn_addNotice.setStyleSheet("QPushButton{\n"
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
-"    background-color: #00000000;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
 "    color: #9E9E9E;\n"
 "}\n"
 "QPushButton:hover{\n"

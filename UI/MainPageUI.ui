@@ -46,11 +46,17 @@
      <rect>
       <x>310</x>
       <y>290</y>
-      <width>201</width>
+      <width>191</width>
       <height>121</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>7</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <item>
       <widget class="QPushButton" name="btn_admin">
        <property name="font">
@@ -67,7 +73,7 @@
         <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{
@@ -108,7 +114,7 @@ QPushButton:checked{
         <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{
@@ -134,7 +140,7 @@ QPushButton:checked{
      <rect>
       <x>320</x>
       <y>180</y>
-      <width>171</width>
+      <width>181</width>
       <height>91</height>
      </rect>
     </property>
@@ -142,10 +148,12 @@ QPushButton:checked{
      <font>
       <family>Palatino Linotype</family>
       <pointsize>40</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(85, 170, 255);</string>
+     <string notr="true">color: #9E9E9E;</string>
     </property>
     <property name="text">
      <string>Login</string>

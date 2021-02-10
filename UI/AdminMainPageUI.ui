@@ -49,7 +49,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(85, 170, 255);</string>
+    <string notr="true">color: #9E9E9E;</string>
    </property>
    <property name="text">
     <string>Admin Main Page</string>
@@ -78,8 +78,8 @@
     <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
-	color: red;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+	color: #9E9E9E;
 }
 QPushButton:hover{
 	color: #FFFFFF;
@@ -119,7 +119,7 @@ QPushButton:checked{
     <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{
@@ -173,7 +173,7 @@ QPushButton:checked{
     <string notr="true">QPushButton{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
-	background-color: #00000000;
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
 	color: #9E9E9E;
 }
 QPushButton:hover{
@@ -205,6 +205,9 @@ QPushButton:checked{
      <family>Palatino Linotype</family>
      <pointsize>14</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
