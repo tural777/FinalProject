@@ -403,32 +403,35 @@ class RegistrationPage(QWidget):
 
     
     def clickedSubmit(self):
-        # print(self.ui.txt_name.text())
-        # print(self.ui.txt_surname.text())
-        # print(self.ui.txt_birthDate.text())
-        # print(self.ui.txt_code.text())
-        # print(self.ui.txt_username.text())
-        # print(self.ui.txt_password.text())
-        # print(self.ui.txt_confirmPass.text())
-        # print(self.role)
 
-        user = User(
-            self.ui.txt_name.text(),
-            self.ui.txt_surname.text(),
-            self.ui.txt_birthDate.text(),
-            self.ui.txt_code.text(),
-            self.ui.txt_username.text(),
-            self.ui.txt_password.text(),
-            self.ui.txt_confirmPass.text(),
-            self.role)
+        name = self.ui.txt_name.text()
+        surname = self.ui.txt_surname.text()
+        birthDate = self.ui.txt_birthDate.text()
+        code = self.ui.txt_code.text()
+        username = self.ui.txt_username.text()
+        password = self.ui.txt_password.text()
+        confirmPass = self.ui.txt_confirmPass.text()
 
-        userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
-        userObjects.append(user)
-        Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
+        if name and surname and birthDate and code and username and password and confirmPass:
+            if password == confirmPass:
+                userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
+                
+                for userObject in userObjects:
+                    if userObject.username == username:
+                        print(username, 'already exists')
+                        return
 
-        self.loginPage = LoginPage(self.role)
-        self.loginPage.show()
-        self.close()
+                user = User(name,surname,birthDate,code,username,password,confirmPass,self.role)
+                userObjects.append(user)
+                Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
+
+                self.loginPage = LoginPage(self.role)
+                self.loginPage.show()
+                self.close()
+            else:
+                print('Wrong: Confirm Password')
+        else:
+            print('Empty input')
 
 
 
