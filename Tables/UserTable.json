@@ -1,0 +1,82 @@
+[
+    {
+        "birthDate": "1",
+        "code": "",
+        "confirmPassword": "",
+        "name": "a1",
+        "password": "a1",
+        "role": "Admin",
+        "surname": "1",
+        "username": "a1"
+    },
+    {
+        "birthDate": "1aa",
+        "code": "aaada",
+        "confirmPassword": "b1",
+        "name": "aaa",
+        "password": "b1",
+        "role": "Member",
+        "surname": "aaa",
+        "username": "b1"
+    },
+    {
+        "birthDate": "3",
+        "code": "4",
+        "confirmPassword": "",
+        "name": "1",
+        "password": "6",
+        "role": "Admin",
+        "surname": "2",
+        "username": "5"
+    },
+    {
+        "birthDate": "",
+        "code": "",
+        "confirmPassword": "",
+        "name": "Test",
+        "password": "",
+        "role": "Admin",
+        "surname": "",
+        "username": ""
+    },
+    {
+        "birthDate": "",
+        "code": "",
+        "confirmPassword": "",
+        "name": "",
+        "password": "",
+        "role": "Admin",
+        "surname": "",
+        "username": ""
+    },
+    {
+        "birthDate": "",
+        "code": "",
+        "confirmPassword": "",
+        "name": "kjkk",
+        "password": "",
+        "role": "Admin",
+        "surname": "ghffhg",
+        "username": ""
+    },
+    {
+        "birthDate": "a",
+        "code": "a",
+        "confirmPassword": "a",
+        "name": "a",
+        "password": "a",
+        "role": "Member",
+        "surname": "a",
+        "username": "a"
+    },
+    {
+        "birthDate": "",
+        "code": "",
+        "confirmPassword": "",
+        "name": "",
+        "password": "",
+        "role": "Member",
+        "surname": "",
+        "username": ""
+    }
+]
