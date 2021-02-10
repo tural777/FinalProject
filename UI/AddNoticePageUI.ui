@@ -16,6 +16,12 @@
     <height>600</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="font">
    <font>
     <family>Palatino Linotype</family>
@@ -93,24 +99,38 @@
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>520</y>
-     <width>160</width>
-     <height>55</height>
+     <y>525</y>
+     <width>180</width>
+     <height>50</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Palatino Linotype</family>
-     <pointsize>18</pointsize>
-     <underline>true</underline>
+     <pointsize>16</pointsize>
+     <underline>false</underline>
     </font>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 1px solid black;
-color: rgb(85, 170, 255);</string>
+    <string notr="true">QPushButton{
+	border: 2px solid #9E9E9E;
+	border-radius: 15px;
+	background-color: #00000000;
+	color: #9E9E9E;
+}
+QPushButton:hover{
+	color: #FFFFFF;
+	background-color: #5a5a5a;
+}
+QPushButton:pressed{
+	color: #9c2219;
+}
+QPushButton:checked{
+	color: #2c998e;
+}</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -119,25 +139,39 @@ color: rgb(85, 170, 255);</string>
   <widget class="QPushButton" name="btn_addNotice">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>520</y>
-     <width>191</width>
-     <height>55</height>
+     <x>590</x>
+     <y>525</y>
+     <width>180</width>
+     <height>50</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Palatino Linotype</family>
-     <pointsize>18</pointsize>
-     <underline>true</underline>
+     <pointsize>16</pointsize>
+     <underline>false</underline>
     </font>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 1px solid black;
-color: rgb(85, 170, 255);</string>
+    <string notr="true">QPushButton{
+	border: 2px solid #9E9E9E;
+	border-radius: 15px;
+	background-color: #00000000;
+	color: #9E9E9E;
+}
+QPushButton:hover{
+	color: #FFFFFF;
+	background-color: #5a5a5a;
+}
+QPushButton:pressed{
+	color: #9c2219;
+}
+QPushButton:checked{
+	color: #2c998e;
+}</string>
    </property>
    <property name="text">
     <string>Add Notice</string>

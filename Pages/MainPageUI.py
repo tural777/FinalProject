@@ -17,6 +17,7 @@ class Ui_Main(object):
         Main.setEnabled(True)
         Main.resize(800, 600)
         Main.setMinimumSize(QtCore.QSize(800, 600))
+        Main.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
@@ -26,7 +27,7 @@ class Ui_Main(object):
         self.centralwidget = QtWidgets.QWidget(Main)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(280, 280, 231, 111))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(310, 290, 201, 121))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -35,41 +36,78 @@ class Ui_Main(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setUnderline(True)
+        font.setUnderline(False)
         self.btn_admin.setFont(font)
         self.btn_admin.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_admin.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_admin.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_admin.setObjectName("btn_admin")
         self.verticalLayout.addWidget(self.btn_admin)
         self.btn_member = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_member.sizePolicy().hasHeightForWidth())
+        self.btn_member.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setUnderline(True)
+        font.setUnderline(False)
         self.btn_member.setFont(font)
         self.btn_member.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_member.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_member.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_member.setObjectName("btn_member")
         self.verticalLayout.addWidget(self.btn_member)
         self.lbl_login = QtWidgets.QLabel(self.centralwidget)
-        self.lbl_login.setGeometry(QtCore.QRect(330, 180, 141, 91))
+        self.lbl_login.setGeometry(QtCore.QRect(320, 180, 171, 91))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(30)
+        font.setPointSize(40)
         self.lbl_login.setFont(font)
-        self.lbl_login.setStyleSheet("color: rgb(0, 0, 0);")
+        self.lbl_login.setStyleSheet("color: rgb(85, 170, 255);")
         self.lbl_login.setObjectName("lbl_login")
         self.lbl_title = QtWidgets.QLabel(self.centralwidget)
-        self.lbl_title.setGeometry(QtCore.QRect(120, 10, 591, 80))
+        self.lbl_title.setGeometry(QtCore.QRect(60, 60, 681, 81))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(35)
         font.setBold(True)
         font.setWeight(75)
+        font.setKerning(True)
         self.lbl_title.setFont(font)
         self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
+        self.lbl_title.setText("")
+        self.lbl_title.setScaledContents(True)
+        self.lbl_title.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_title.setObjectName("lbl_title")
         Main.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(Main)
@@ -85,4 +123,3 @@ class Ui_Main(object):
         self.btn_admin.setText(_translate("Main", "Admin"))
         self.btn_member.setText(_translate("Main", "Member"))
         self.lbl_login.setText(_translate("Main", "Login"))
-        self.lbl_title.setText(_translate("Main", "Term Sports Complex"))

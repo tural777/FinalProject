@@ -19,6 +19,12 @@
     <height>600</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="font">
    <font>
     <family>Palatino Linotype</family>
@@ -38,10 +44,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>280</y>
-      <width>231</width>
-      <height>111</height>
+      <x>310</x>
+      <y>290</y>
+      <width>201</width>
+      <height>121</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -51,15 +57,29 @@
         <font>
          <family>Palatino Linotype</family>
          <pointsize>18</pointsize>
-         <underline>true</underline>
+         <underline>false</underline>
         </font>
        </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid black;
-color: rgb(85, 170, 255);</string>
+        <string notr="true">QPushButton{
+	border: 2px solid #9E9E9E;
+	border-radius: 15px;
+	background-color: #00000000;
+	color: #9E9E9E;
+}
+QPushButton:hover{
+	color: #FFFFFF;
+	background-color: #5a5a5a;
+}
+QPushButton:pressed{
+	color: #9c2219;
+}
+QPushButton:checked{
+	color: #2c998e;
+}</string>
        </property>
        <property name="text">
         <string>Admin</string>
@@ -68,19 +88,39 @@ color: rgb(85, 170, 255);</string>
      </item>
      <item>
       <widget class="QPushButton" name="btn_member">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <family>Palatino Linotype</family>
          <pointsize>18</pointsize>
-         <underline>true</underline>
+         <underline>false</underline>
         </font>
        </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid black;
-color: rgb(85, 170, 255);</string>
+        <string notr="true">QPushButton{
+	border: 2px solid #9E9E9E;
+	border-radius: 15px;
+	background-color: #00000000;
+	color: #9E9E9E;
+}
+QPushButton:hover{
+	color: #FFFFFF;
+	background-color: #5a5a5a;
+}
+QPushButton:pressed{
+	color: #9c2219;
+}
+QPushButton:checked{
+	color: #2c998e;
+}</string>
        </property>
        <property name="text">
         <string>Member</string>
@@ -92,20 +132,20 @@ color: rgb(85, 170, 255);</string>
    <widget class="QLabel" name="lbl_login">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>320</x>
       <y>180</y>
-      <width>141</width>
+      <width>171</width>
       <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Palatino Linotype</family>
-      <pointsize>30</pointsize>
+      <pointsize>40</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(85, 170, 255);</string>
     </property>
     <property name="text">
      <string>Login</string>
@@ -114,10 +154,10 @@ color: rgb(85, 170, 255);</string>
    <widget class="QLabel" name="lbl_title">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
-      <width>591</width>
-      <height>80</height>
+      <x>60</x>
+      <y>60</y>
+      <width>681</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -126,13 +166,20 @@ color: rgb(85, 170, 255);</string>
       <pointsize>35</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+      <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(85, 170, 255);</string>
     </property>
     <property name="text">
-     <string>Term Sports Complex</string>
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

@@ -16,31 +16,60 @@ class Ui_AddLesson(object):
         AddLesson.setObjectName("AddLesson")
         AddLesson.resize(800, 600)
         AddLesson.setMinimumSize(QtCore.QSize(800, 600))
+        AddLesson.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         AddLesson.setFont(font)
         self.btn_back = QtWidgets.QPushButton(AddLesson)
-        self.btn_back.setGeometry(QtCore.QRect(400, 520, 160, 55))
+        self.btn_back.setGeometry(QtCore.QRect(400, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_back.setFont(font)
         self.btn_back.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_back.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_back.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_back.setObjectName("btn_back")
         self.btn_addLesson = QtWidgets.QPushButton(AddLesson)
-        self.btn_addLesson.setGeometry(QtCore.QRect(580, 520, 191, 55))
+        self.btn_addLesson.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_addLesson.setFont(font)
         self.btn_addLesson.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_addLesson.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_addLesson.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_addLesson.setObjectName("btn_addLesson")
         self.horizontalLayoutWidget = QtWidgets.QWidget(AddLesson)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(110, 120, 581, 357))

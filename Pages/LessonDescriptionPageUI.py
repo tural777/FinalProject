@@ -16,20 +16,35 @@ class Ui_LessonDescription(object):
         LessonDescription.setObjectName("LessonDescription")
         LessonDescription.resize(800, 600)
         LessonDescription.setMinimumSize(QtCore.QSize(800, 600))
+        LessonDescription.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         LessonDescription.setFont(font)
         self.btn_back = QtWidgets.QPushButton(LessonDescription)
-        self.btn_back.setGeometry(QtCore.QRect(610, 520, 160, 55))
+        self.btn_back.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_back.setFont(font)
         self.btn_back.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_back.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_back.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_back.setObjectName("btn_back")
         self.horizontalLayoutWidget = QtWidgets.QWidget(LessonDescription)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(120, 120, 581, 357))
@@ -86,15 +101,29 @@ class Ui_LessonDescription(object):
         self.verticalLayout_2.addWidget(self.lbl_edit_description)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
         self.btn_signUpForLesson = QtWidgets.QPushButton(LessonDescription)
-        self.btn_signUpForLesson.setGeometry(QtCore.QRect(30, 520, 261, 55))
+        self.btn_signUpForLesson.setGeometry(QtCore.QRect(30, 525, 250, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_signUpForLesson.setFont(font)
         self.btn_signUpForLesson.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_signUpForLesson.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_signUpForLesson.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_signUpForLesson.setObjectName("btn_signUpForLesson")
         self.lbl_title = QtWidgets.QLabel(LessonDescription)
         self.lbl_title.setGeometry(QtCore.QRect(140, 10, 511, 80))

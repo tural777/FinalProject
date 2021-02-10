@@ -491,7 +491,11 @@ class MyApp(QMainWindow):
 
         self.ui.btn_member.clicked.connect(self.clickedLogin)
         self.ui.btn_admin.clicked.connect(self.clickedLogin)
-    
+
+        self.pixmap = QtGui.QPixmap('Icons/Logo.png') 
+        self.ui.lbl_title.setPixmap(self.pixmap)
+
+  
 
     def clickedLogin(self):
         sender = self.sender().text()

@@ -16,12 +16,13 @@ class Ui_AdminMain(object):
         AdminMain.setObjectName("AdminMain")
         AdminMain.resize(800, 600)
         AdminMain.setMinimumSize(QtCore.QSize(800, 600))
+        AdminMain.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         AdminMain.setFont(font)
         self.lbl_title = QtWidgets.QLabel(AdminMain)
-        self.lbl_title.setGeometry(QtCore.QRect(140, 10, 521, 80))
+        self.lbl_title.setGeometry(QtCore.QRect(160, 10, 521, 80))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(35)
@@ -31,40 +32,82 @@ class Ui_AdminMain(object):
         self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
         self.lbl_title.setObjectName("lbl_title")
         self.btn_deleteLesson = QtWidgets.QPushButton(AdminMain)
-        self.btn_deleteLesson.setGeometry(QtCore.QRect(31, 520, 200, 55))
+        self.btn_deleteLesson.setGeometry(QtCore.QRect(30, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_deleteLesson.setFont(font)
         self.btn_deleteLesson.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_deleteLesson.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(255, 0, 0);")
+        self.btn_deleteLesson.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: red;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_deleteLesson.setObjectName("btn_deleteLesson")
         self.btn_addLesson = QtWidgets.QPushButton(AdminMain)
-        self.btn_addLesson.setGeometry(QtCore.QRect(570, 520, 200, 55))
+        self.btn_addLesson.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_addLesson.setFont(font)
         self.btn_addLesson.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_addLesson.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_addLesson.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_addLesson.setObjectName("btn_addLesson")
         self.label = QtWidgets.QLabel(AdminMain)
         self.label.setGeometry(QtCore.QRect(210, 90, 371, 81))
         self.label.setObjectName("label")
         self.btn_addNotice = QtWidgets.QPushButton(AdminMain)
-        self.btn_addNotice.setGeometry(QtCore.QRect(360, 520, 200, 55))
+        self.btn_addNotice.setGeometry(QtCore.QRect(400, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_addNotice.setFont(font)
         self.btn_addNotice.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_addNotice.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_addNotice.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_addNotice.setObjectName("btn_addNotice")
         self.tableWidget = QtWidgets.QTableWidget(AdminMain)
         self.tableWidget.setGeometry(QtCore.QRect(30, 170, 741, 331))

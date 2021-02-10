@@ -16,6 +16,7 @@ class Ui_ImportantNotices(object):
         ImportantNotices.setObjectName("ImportantNotices")
         ImportantNotices.resize(800, 600)
         ImportantNotices.setMinimumSize(QtCore.QSize(800, 600))
+        ImportantNotices.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(21)
@@ -31,15 +32,29 @@ class Ui_ImportantNotices(object):
         self.lbl_title.setStyleSheet("color: rgb(85, 170, 255);")
         self.lbl_title.setObjectName("lbl_title")
         self.btn_back = QtWidgets.QPushButton(ImportantNotices)
-        self.btn_back.setGeometry(QtCore.QRect(610, 520, 160, 55))
+        self.btn_back.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_back.setFont(font)
         self.btn_back.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_back.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_back.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_back.setObjectName("btn_back")
         self.tableWidget = QtWidgets.QTableWidget(ImportantNotices)
         self.tableWidget.setGeometry(QtCore.QRect(30, 110, 741, 391))

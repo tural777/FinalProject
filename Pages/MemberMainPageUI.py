@@ -16,6 +16,7 @@ class Ui_MemberMain(object):
         MemberMain.setObjectName("MemberMain")
         MemberMain.resize(800, 600)
         MemberMain.setMinimumSize(QtCore.QSize(800, 600))
+        MemberMain.setMaximumSize(QtCore.QSize(800, 600))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
@@ -34,26 +35,54 @@ class Ui_MemberMain(object):
         self.label.setGeometry(QtCore.QRect(210, 90, 371, 81))
         self.label.setObjectName("label")
         self.btn_Notices = QtWidgets.QPushButton(MemberMain)
-        self.btn_Notices.setGeometry(QtCore.QRect(30, 520, 160, 55))
+        self.btn_Notices.setGeometry(QtCore.QRect(30, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_Notices.setFont(font)
         self.btn_Notices.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_Notices.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_Notices.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_Notices.setObjectName("btn_Notices")
         self.btn_viewReport = QtWidgets.QPushButton(MemberMain)
-        self.btn_viewReport.setGeometry(QtCore.QRect(549, 520, 221, 55))
+        self.btn_viewReport.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(18)
-        font.setUnderline(True)
+        font.setPointSize(16)
+        font.setUnderline(False)
         self.btn_viewReport.setFont(font)
         self.btn_viewReport.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_viewReport.setStyleSheet("border: 1px solid black;\n"
-"color: rgb(85, 170, 255);")
+        self.btn_viewReport.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #00000000;\n"
+"    color: #9E9E9E;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #FFFFFF;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
         self.btn_viewReport.setObjectName("btn_viewReport")
         self.tableWidget = QtWidgets.QTableWidget(MemberMain)
         self.tableWidget.setGeometry(QtCore.QRect(30, 170, 741, 331))
