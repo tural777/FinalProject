@@ -21,6 +21,7 @@ class Ui_AddNotice(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         AddNotice.setFont(font)
+        AddNotice.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.horizontalLayoutWidget = QtWidgets.QWidget(AddNotice)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(190, 220, 451, 121))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
@@ -52,6 +53,10 @@ class Ui_AddNotice(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_date = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_date.setFont(font)
         self.txt_date.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -61,6 +66,10 @@ class Ui_AddNotice(object):
         self.txt_date.setObjectName("txt_date")
         self.verticalLayout_2.addWidget(self.txt_date)
         self.txt_notice = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_notice.setFont(font)
         self.txt_notice.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -92,10 +101,10 @@ class Ui_AddNotice(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -117,10 +126,10 @@ class Ui_AddNotice(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"

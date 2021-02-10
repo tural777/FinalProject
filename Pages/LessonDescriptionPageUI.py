@@ -21,6 +21,7 @@ class Ui_LessonDescription(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         LessonDescription.setFont(font)
+        LessonDescription.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.btn_back = QtWidgets.QPushButton(LessonDescription)
         self.btn_back.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
@@ -33,10 +34,10 @@ class Ui_LessonDescription(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -190,10 +191,10 @@ class Ui_LessonDescription(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"

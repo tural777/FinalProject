@@ -31,6 +31,9 @@
   <property name="windowTitle">
    <string>Term Spors Complex</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QLabel" name="lbl_title">
    <property name="geometry">
     <rect>
@@ -92,10 +95,10 @@
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
 	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
-	color: #9E9E9E;
+	color: #FFFFFF;
 }
 QPushButton:hover{
-	color: #FFFFFF;
+	color: #9E9E9E;
 	background-color: #5a5a5a;
 }
 QPushButton:pressed{
@@ -133,10 +136,10 @@ QPushButton:checked{
 	border: 2px solid #9E9E9E;
 	border-radius: 15px;
 	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
-	color: #9E9E9E;
+	color: #FFFFFF;
 }
 QPushButton:hover{
-	color: #FFFFFF;
+	color: #9E9E9E;
 	background-color: #5a5a5a;
 }
 QPushButton:pressed{

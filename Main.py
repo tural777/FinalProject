@@ -127,9 +127,10 @@ class AdminMainPage(QWidget):
     def clickedDeleteLesson(self):
         for item in self.ui.tableWidget.selectedItems():
             del lessonObjects[item.row()-1]
-
-        self.showLessons()
-        #Convertor.writeObjectsToDatabese(lessonObjects, 'Tables/LessonTable.json')
+        
+        if self.ui.tableWidget.selectedItems():
+            self.showLessons()
+            Convertor.writeObjectsToDatabese(lessonObjects, 'Tables/LessonTable.json')
 
 
     def clickedMoreDetail(self):
@@ -492,10 +493,13 @@ class MyApp(QMainWindow):
         self.ui.btn_member.clicked.connect(self.clickedLogin)
         self.ui.btn_admin.clicked.connect(self.clickedLogin)
 
-        self.pixmap = QtGui.QPixmap('Icons/Logo.png') 
-        self.ui.lbl_title.setPixmap(self.pixmap)
+        # pixmap = QtGui.QPixmap('Icons/Logo.png') 
+        # self.ui.lbl_title.setPixmap(pixmap)
 
-  
+        # pixmapLogo = QtGui.QPixmap(32,32)
+        # pixmapLogo.fill(Qt.transparent)
+        # self.setWindowIcon(QtGui.QIcon(pixmapLogo))
+        # self.setWindowTitle(' ')
 
     def clickedLogin(self):
         sender = self.sender().text()

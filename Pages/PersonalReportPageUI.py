@@ -21,6 +21,7 @@ class Ui_PersonalReport(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         PersonalReport.setFont(font)
+        PersonalReport.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.btn_back = QtWidgets.QPushButton(PersonalReport)
         self.btn_back.setGeometry(QtCore.QRect(590, 525, 180, 50))
         font = QtGui.QFont()
@@ -33,10 +34,10 @@ class Ui_PersonalReport(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -47,7 +48,7 @@ class Ui_PersonalReport(object):
 "}")
         self.btn_back.setObjectName("btn_back")
         self.horizontalLayoutWidget = QtWidgets.QWidget(PersonalReport)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(110, 100, 591, 406))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(110, 100, 591, 399))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -126,6 +127,10 @@ class Ui_PersonalReport(object):
         self.verticalLayout_2.setSpacing(8)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_lastClassAtt = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_lastClassAtt.setFont(font)
         self.txt_lastClassAtt.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -135,6 +140,10 @@ class Ui_PersonalReport(object):
         self.txt_lastClassAtt.setObjectName("txt_lastClassAtt")
         self.verticalLayout_2.addWidget(self.txt_lastClassAtt)
         self.txt_TotNumOfClsAttThisMonth = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_TotNumOfClsAttThisMonth.setFont(font)
         self.txt_TotNumOfClsAttThisMonth.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -144,6 +153,10 @@ class Ui_PersonalReport(object):
         self.txt_TotNumOfClsAttThisMonth.setObjectName("txt_TotNumOfClsAttThisMonth")
         self.verticalLayout_2.addWidget(self.txt_TotNumOfClsAttThisMonth)
         self.txt_totalMonthlyFee = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_totalMonthlyFee.setFont(font)
         self.txt_totalMonthlyFee.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -153,6 +166,10 @@ class Ui_PersonalReport(object):
         self.txt_totalMonthlyFee.setObjectName("txt_totalMonthlyFee")
         self.verticalLayout_2.addWidget(self.txt_totalMonthlyFee)
         self.txt_inputHeight = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_inputHeight.setFont(font)
         self.txt_inputHeight.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -162,6 +179,10 @@ class Ui_PersonalReport(object):
         self.txt_inputHeight.setObjectName("txt_inputHeight")
         self.verticalLayout_2.addWidget(self.txt_inputHeight)
         self.txt_inputWeight = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_inputWeight.setFont(font)
         self.txt_inputWeight.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -171,6 +192,10 @@ class Ui_PersonalReport(object):
         self.txt_inputWeight.setObjectName("txt_inputWeight")
         self.verticalLayout_2.addWidget(self.txt_inputWeight)
         self.txt_BMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_BMI.setFont(font)
         self.txt_BMI.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -180,6 +205,10 @@ class Ui_PersonalReport(object):
         self.txt_BMI.setObjectName("txt_BMI")
         self.verticalLayout_2.addWidget(self.txt_BMI)
         self.txt_targetBMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_targetBMI.setFont(font)
         self.txt_targetBMI.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"

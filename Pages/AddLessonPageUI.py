@@ -21,6 +21,7 @@ class Ui_AddLesson(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         AddLesson.setFont(font)
+        AddLesson.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.btn_back = QtWidgets.QPushButton(AddLesson)
         self.btn_back.setGeometry(QtCore.QRect(400, 525, 180, 50))
         font = QtGui.QFont()
@@ -33,10 +34,10 @@ class Ui_AddLesson(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -58,10 +59,10 @@ class Ui_AddLesson(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -138,6 +139,10 @@ class Ui_AddLesson(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_lessonType = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_lessonType.setFont(font)
         self.txt_lessonType.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -147,6 +152,10 @@ class Ui_AddLesson(object):
         self.txt_lessonType.setObjectName("txt_lessonType")
         self.verticalLayout_2.addWidget(self.txt_lessonType)
         self.txt_teacher = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_teacher.setFont(font)
         self.txt_teacher.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -156,6 +165,10 @@ class Ui_AddLesson(object):
         self.txt_teacher.setObjectName("txt_teacher")
         self.verticalLayout_2.addWidget(self.txt_teacher)
         self.txt_date = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_date.setFont(font)
         self.txt_date.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -165,6 +178,10 @@ class Ui_AddLesson(object):
         self.txt_date.setObjectName("txt_date")
         self.verticalLayout_2.addWidget(self.txt_date)
         self.txt_time = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_time.setFont(font)
         self.txt_time.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -174,6 +191,10 @@ class Ui_AddLesson(object):
         self.txt_time.setObjectName("txt_time")
         self.verticalLayout_2.addWidget(self.txt_time)
         self.txt_price = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_price.setFont(font)
         self.txt_price.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -183,6 +204,10 @@ class Ui_AddLesson(object):
         self.txt_price.setObjectName("txt_price")
         self.verticalLayout_2.addWidget(self.txt_price)
         self.txt_description = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_description.setFont(font)
         self.txt_description.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"

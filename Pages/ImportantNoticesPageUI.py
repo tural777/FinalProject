@@ -21,6 +21,7 @@ class Ui_ImportantNotices(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(21)
         ImportantNotices.setFont(font)
+        ImportantNotices.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lbl_title = QtWidgets.QLabel(ImportantNotices)
         self.lbl_title.setGeometry(QtCore.QRect(150, 10, 491, 80))
         font = QtGui.QFont()
@@ -43,10 +44,10 @@ class Ui_ImportantNotices(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"

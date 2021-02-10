@@ -22,7 +22,6 @@ class Convertor():
 
     @staticmethod
     def writeObjectsToDatabese(objectList, json_filename):
-
         if len(objectList):
             objectDicts = []
             for object in objectList:
@@ -31,5 +30,10 @@ class Convertor():
             try:
                 with open(json_filename, "w", encoding='utf-8') as f:
                     json.dump(objectDicts, f, indent=4, sort_keys=True)
+            except:
+                print('Cant write json file...')
+        else:
+            try:
+                open(json_filename, 'w').close()
             except:
                 print('Cant write json file...')

@@ -21,6 +21,7 @@ class Ui_Login(object):
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         Login.setFont(font)
+        Login.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lbl_title = QtWidgets.QLabel(Login)
         self.lbl_title.setGeometry(QtCore.QRect(210, 10, 401, 80))
         font = QtGui.QFont()
@@ -43,10 +44,10 @@ class Ui_Login(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -68,10 +69,10 @@ class Ui_Login(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -115,6 +116,10 @@ class Ui_Login(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.txt_username = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_username.setFont(font)
         self.txt_username.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -124,12 +129,17 @@ class Ui_Login(object):
         self.txt_username.setObjectName("txt_username")
         self.verticalLayout_2.addWidget(self.txt_username)
         self.txt_password = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        self.txt_password.setFont(font)
         self.txt_password.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.txt_password.setObjectName("txt_password")
         self.verticalLayout_2.addWidget(self.txt_password)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -145,10 +155,10 @@ class Ui_Login(object):
 "    border: 2px solid #9E9E9E;\n"
 "    border-radius: 15px;\n"
 "    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
-"    color: #9E9E9E;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QPushButton:hover{\n"
-"    color: #FFFFFF;\n"
+"    color: #9E9E9E;\n"
 "    background-color: #5a5a5a;\n"
 "}\n"
 "QPushButton:pressed{\n"
