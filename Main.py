@@ -60,7 +60,7 @@ class AddNoticePage(QWidget):
             message = f'{noticeInput} was successfully added'
             parent = self.adminMainPage
         else:
-            message = 'Empty input'
+            message = 'Notice cannot be empty'
             parent = self
 
         QToaster.showMessage(parent, message, 
