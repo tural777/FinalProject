@@ -32,7 +32,7 @@
    <string>Term Spors Complex</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(254, 254, 254);</string>
   </property>
   <widget class="QPushButton" name="btn_back">
    <property name="geometry">
@@ -78,15 +78,18 @@ QPushButton:checked{
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>160</x>
      <y>120</y>
-     <width>581</width>
+     <width>531</width>
      <height>357</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>7</number>
+      </property>
       <item>
        <widget class="QLabel" name="lbl_lessonType">
         <property name="font">

@@ -3,11 +3,12 @@ import sys
 # PyQt5 modules
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication , QMainWindow, QPushButton, QTableWidgetItem, QWidget
+from PyQt5.QtWidgets import QApplication, QHeaderView, QStyle, QMainWindow, QMessageBox, QPushButton, QTableWidgetItem, QWidget
 
 # My Classes
 from Classes import *
 from Convertor import *
+from ToastNotifier import QToaster
 
 # User Interfaces
 from Pages.MainPageUI import Ui_Main
@@ -25,6 +26,8 @@ from Pages.AddNoticePageUI import Ui_AddNotice
 
 lessonObjects = Convertor.readObjectsFromDatabase(Lesson, 'Tables/LessonTable.json')
 noticeObjects = Convertor.readObjectsFromDatabase(Notice, 'Tables/NoticeTable.json')
+userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
+
 
 
 ### Add Notice Page ###
@@ -44,18 +47,25 @@ class AddNoticePage(QWidget):
         self.close()
 
     def clickedAddNotice(self):
-        date = self.ui.txt_date.text()
-        notice = self.ui.txt_notice.text()
+        dateInput = self.ui.txt_date.text()
+        noticeInput = self.ui.txt_notice.text()
         
-        if date and notice:
-            notice = Notice(date, notice)
+        if dateInput and noticeInput:
+            notice = Notice(dateInput, noticeInput)
             noticeObjects.append(notice)
             Convertor.writeObjectsToDatabese(noticeObjects, 'Tables/NoticeTable.json')
             self.adminMainPage = AdminMainPage()
             self.adminMainPage.show()
             self.close()
+            message = f'{noticeInput} was successfully added'
+            parent = self.adminMainPage
         else:
-            print('MessageBox: Empty input')
+            message = 'Empty input'
+            parent = self
+
+        QToaster.showMessage(parent, message, 
+                QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                desktop=False, timeout=2000, closable=False)
 
 
 
@@ -92,8 +102,15 @@ class AddLessonPage(QWidget):
             self.adminMainPage = AdminMainPage()
             self.adminMainPage.show()
             self.close()
+            message = f'{description} was successfully added'
+            parent = self.adminMainPage
         else:
-            print('MessageBox: Empty input')
+            message = 'Empty input'
+            parent = self
+
+        QToaster.showMessage(parent, message, 
+                QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                desktop=False, timeout=2000, closable=False)
 
 
 
@@ -125,16 +142,33 @@ class AdminMainPage(QWidget):
 
 
     def clickedDeleteLesson(self):
-        for item in self.ui.tableWidget.selectedItems():
-            del lessonObjects[item.row()-1]
+        message = ''
         
         if self.ui.tableWidget.selectedItems():
+            indexesSort = []
+            for item in self.ui.tableWidget.selectedItems():
+                indexesSort.append(item.row())
+                message += f'{item.text()} '
+
+            indexesSort.sort(reverse=True)
+
+            for index in indexesSort:
+                del lessonObjects[index]
+
+            message += 'deleted'
+
             self.showLessons()
             Convertor.writeObjectsToDatabese(lessonObjects, 'Tables/LessonTable.json')
+        else:
+            message = 'Please select a lesson to delete'
+
+        QToaster.showMessage(self, message, 
+                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                    desktop=False, timeout=2000, closable=False)
 
 
     def clickedMoreDetail(self):
-        self.lessonDescriptionPage = LessonDescriptionPage('Admin', self.sender().property("index")-1)
+        self.lessonDescriptionPage = LessonDescriptionPage('Admin', self.sender().property("index"))
         self.lessonDescriptionPage.show()
         self.close()
 
@@ -142,21 +176,17 @@ class AdminMainPage(QWidget):
     def showLessons(self):
         columnCount = 3
         self.ui.tableWidget.setColumnCount(columnCount)
-        self.ui.tableWidget.setRowCount(len(lessonObjects)+1) #for header
+        self.ui.tableWidget.setRowCount(len(lessonObjects))
 
-        self.ui.tableWidget.setSpan(0, 0, 1, 3)   
-        header = QTableWidgetItem("Lessons")
-        header.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        header.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+        self.ui.tableWidget.setHorizontalHeaderLabels(['Name', 'DateTime', 'Details'])
+        self.ui.tableWidget.horizontalHeader().setStyleSheet('font: 75 18pt "Comic Sans MS";')
 
-        self.ui.tableWidget.setItem(0, 0, header) 
-        
         width = int(self.ui.tableWidget.width() / columnCount / 1.001)
 
         for col in range(columnCount):
             self.ui.tableWidget.setColumnWidth(col, width)
 
-        rowIndex = 1
+        rowIndex = 0
         for lesson in lessonObjects:
             item1 = QTableWidgetItem(lesson.smallDescription)
             item2 = QTableWidgetItem(f'{lesson.date}, {lesson.time}')
@@ -217,7 +247,32 @@ class LessonDescriptionPage(QWidget):
 
 
     def clickedSignUpForLesson(self):
-        print('SiginUp')
+        result = QMessageBox.question(self,'Term Sport Complex','Are you sure ?', QMessageBox.Yes | QMessageBox.No)
+
+        if(result == QMessageBox.Yes):
+            self.memberMainPage = MemberMainPage()
+            self.memberMainPage.show()
+            self.close()
+            message = 'Successfully'
+            parent = self.memberMainPage
+      
+        elif(result == QMessageBox.No):
+            message = 'Canceled'
+            parent = self
+
+        QToaster.showMessage(parent, message, 
+            QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+            desktop=False, timeout=2000, closable=False)
+            
+
+
+
+
+
+       
+
+
+
 
 
     def showLessonDescription(self):
@@ -313,7 +368,7 @@ class MemberMainPage(QWidget):
         self.ui = Ui_MemberMain()
         self.ui.setupUi(self)
 
-        self.ui.btn_Notices.clicked.connect(self.clickedNotices)
+        self.ui.btn_notices.clicked.connect(self.clickedNotices)
         self.ui.btn_viewReport.clicked.connect(self.clickedViewReport)
 
         self.showLessons()
@@ -333,20 +388,17 @@ class MemberMainPage(QWidget):
     def showLessons(self):
         columnCount = 3
         self.ui.tableWidget.setColumnCount(columnCount)
-        self.ui.tableWidget.setRowCount(len(lessonObjects)+1) #for header
+        self.ui.tableWidget.setRowCount(len(lessonObjects))
 
-        self.ui.tableWidget.setSpan(0, 0, 1, 3)   
-        header = QTableWidgetItem("Lessons")
-        header.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        header.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
-        self.ui.tableWidget.setItem(0, 0, header) 
+        self.ui.tableWidget.setHorizontalHeaderLabels(['Name', 'DateTime', 'Details'])
+        self.ui.tableWidget.horizontalHeader().setStyleSheet('font: 75 18pt "Comic Sans MS";')
         
         width = int(self.ui.tableWidget.width() / columnCount / 1.001)
 
         for col in range(columnCount):
             self.ui.tableWidget.setColumnWidth(col, width)
 
-        rowIndex = 1
+        rowIndex = 0
         for lesson in lessonObjects:
             item1 = QTableWidgetItem(lesson.smallDescription)
             item2 = QTableWidgetItem(f'{lesson.date}, {lesson.time}')
@@ -378,7 +430,7 @@ class MemberMainPage(QWidget):
 
 
     def clickedMoreDetail(self):
-        self.lessonDescriptionPage = LessonDescriptionPage('Member', self.sender().property("index")-1)
+        self.lessonDescriptionPage = LessonDescriptionPage('Member', self.sender().property("index"))
         self.lessonDescriptionPage.show()
         self.close()
 
@@ -415,11 +467,11 @@ class RegistrationPage(QWidget):
 
         if name and surname and birthDate and code and username and password and confirmPass:
             if password == confirmPass:
-                userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
-                
                 for userObject in userObjects:
                     if userObject.username == username:
-                        print(username, 'already exists')
+                        QToaster.showMessage(self, 'Already exists', 
+                            QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                            desktop=False, timeout=2000, closable=False)
                         return
 
                 user = User(name,surname,birthDate,code,username,password,confirmPass,self.role)
@@ -429,10 +481,19 @@ class RegistrationPage(QWidget):
                 self.loginPage = LoginPage(self.role)
                 self.loginPage.show()
                 self.close()
+
+                QToaster.showMessage(self, 'Successfully', 
+                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                    desktop=False, timeout=2000, closable=False)
+
             else:
-                print('Wrong: Confirm Password')
+                QToaster.showMessage(self, 'Wrong: Confirm Password', 
+                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                    desktop=False, timeout=2000, closable=False)
         else:
-            print('Empty input')
+            QToaster.showMessage(self, 'Empty input', 
+                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                    desktop=False, timeout=2000, closable=False)
 
 
 
@@ -463,7 +524,6 @@ class LoginPage(QWidget):
 
     def clickedSigIn(self):
 
-        userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
 
         for user in userObjects:
             if self.role == 'Member':
@@ -478,7 +538,10 @@ class LoginPage(QWidget):
                     self.adminMainPage.show()
                     self.close()
                     break
-
+        else:
+            QToaster.showMessage(self, 'The email or password is incorrect', 
+                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                    desktop=False, timeout=2000, closable=False)
 
 
 

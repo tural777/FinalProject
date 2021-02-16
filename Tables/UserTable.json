@@ -14,9 +14,29 @@
         "code": "m",
         "confirmPassword": "m",
         "name": "m",
-        "password": "m",
+        "password": "",
         "role": "Member",
         "surname": "m",
-        "username": "m"
+        "username": ""
+    },
+    {
+        "birthDate": "8/12/1992",
+        "code": "12345",
+        "confirmPassword": "tural123",
+        "name": "Tural",
+        "password": "tural123",
+        "role": "Member",
+        "surname": "Novruzov",
+        "username": "TuralHack"
+    },
+    {
+        "birthDate": "7/1/2021",
+        "code": "123",
+        "confirmPassword": "admin",
+        "name": "Admin",
+        "password": "admin",
+        "role": "Admin",
+        "surname": "Admin",
+        "username": "admin"
     }
 ]

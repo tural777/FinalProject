@@ -71,7 +71,7 @@
     <string>Upcoming Class Schedules</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_Notices">
+  <widget class="QPushButton" name="btn_notices">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -178,7 +178,7 @@ QPushButton:checked{
     <bool>true</bool>
    </property>
    <attribute name="horizontalHeaderVisible">
-    <bool>false</bool>
+    <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderVisible">
     <bool>false</bool>

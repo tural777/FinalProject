@@ -47,10 +47,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>290</y>
-      <width>191</width>
-      <height>121</height>
+      <x>320</x>
+      <y>270</y>
+      <width>181</width>
+      <height>111</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -63,7 +63,7 @@
      <item>
       <widget class="QPushButton" name="btn_admin">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -104,7 +104,7 @@ QPushButton:checked{
      <item>
       <widget class="QPushButton" name="btn_member">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>

@@ -52,17 +52,87 @@ class Ui_AddNotice(object):
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.txt_date = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_date = QtWidgets.QDateEdit(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.txt_date.sizePolicy().hasHeightForWidth())
+        self.txt_date.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         self.txt_date.setFont(font)
-        self.txt_date.setStyleSheet("QLineEdit {\n"
+        self.txt_date.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.txt_date.setStyleSheet("QDateEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
+"}\n"
+"\n"
+"QDateEdit::drop-down {\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"width:25px;\n"
+"border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QCalendarWidget QToolButton {\n"
+"      height: 55px;\n"
+"      width: 100px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      icon-size: 28px, 28px;\n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);\n"
+"  }\n"
+"  QCalendarWidget QMenu {\n"
+"      width: 100px;\n"
+"      left: 20px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      background-color: rgb(100, 100, 200);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox { \n"
+"      width: 100px; \n"
+"      font-size:16px; \n"
+"      color: white; \n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"      selection-background-color: rgb(136, 136, 136);\n"
+"      selection-color: rgb(255, 255, 255);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:35px; }\n"
+"  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:35px;}\n"
+"  QCalendarWidget QSpinBox::up-arrow { width:46px;  height:46px; }\n"
+"  QCalendarWidget QSpinBox::down-arrow { width:46px;  height:46px; }\n"
+"   \n"
+"  /* header row */\n"
+"  QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }\n"
+"   \n"
+"  /* normal days */\n"
+"  QCalendarWidget QAbstractItemView:enabled \n"
+"  {\n"
+"      font-size:16px;  \n"
+"      color: rgb(180, 180, 180);  \n"
+"      background-color: rgb(235, 235, 235);\n"
+"      selection-background-color: rgb(100, 100, 200); \n"
+"    selection-color: white; \n"
+"  \n"
+"  }\n"
+"   \n"
+"  /* days in other months */\n"
+"  /* navigation bar */\n"
+"QCalendarWidget QWidget#qt_calendar_navigationbar\n"
+"{ \n"
+"  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"}\n"
+"\n"
+"QCalendarWidget QAbstractItemView:disabled \n"
+"{ \n"
+"color: rgb(64, 64, 64); \n"
 "}")
+        self.txt_date.setAlignment(QtCore.Qt.AlignCenter)
+        self.txt_date.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
+        self.txt_date.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.txt_date.setCalendarPopup(True)
         self.txt_date.setObjectName("txt_date")
         self.verticalLayout_2.addWidget(self.txt_date)
         self.txt_notice = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -148,6 +218,7 @@ class Ui_AddNotice(object):
         AddNotice.setWindowTitle(_translate("AddNotice", "Term Spors Complex"))
         self.lbl_date.setText(_translate("AddNotice", "Date:"))
         self.lbl_notice.setText(_translate("AddNotice", "Notice:"))
+        self.txt_date.setDisplayFormat(_translate("AddNotice", "d/M/yyyy"))
         self.lbl_title.setText(_translate("AddNotice", "Add a Notice"))
         self.btn_back.setText(_translate("AddNotice", "Back"))
         self.btn_addNotice.setText(_translate("AddNotice", "Add Notice"))

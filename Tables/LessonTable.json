@@ -1,26 +1,34 @@
 [
     {
-        "date": "12/01/2021",
+        "date": "12/1/2021",
         "price": "10 Azn",
         "smallDescription": "Function",
-        "teacher": "Turall",
-        "time": "12:30",
+        "teacher": "Tural",
+        "time": "4:00 PM",
         "type": "Programmer"
     },
     {
-        "date": "01/02/2021",
+        "date": "1/2/2021",
         "price": "9 Azn",
         "smallDescription": "Class",
         "teacher": "Elvin",
-        "time": "13:00",
+        "time": "1:00 PM",
         "type": "Programmer"
     },
     {
-        "date": "02/02/2021",
+        "date": "2/2/2021",
         "price": "11 Azn",
         "smallDescription": "Logo",
         "teacher": "Nermin",
-        "time": "14:30",
+        "time": "3:00 PM",
         "type": "Designer"
+    },
+    {
+        "date": "18/2/2021",
+        "price": "25.00 AZN",
+        "smallDescription": "Delagate",
+        "teacher": "Tural Novruzov",
+        "time": "7:00 PM",
+        "type": "Programmer"
     }
 ]

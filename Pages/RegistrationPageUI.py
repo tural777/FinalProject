@@ -33,7 +33,7 @@ class Ui_Registration(object):
         self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
         self.horizontalLayoutWidget = QtWidgets.QWidget(Registration)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(100, 110, 601, 389))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(100, 110, 601, 391))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -133,17 +133,86 @@ class Ui_Registration(object):
 "}")
         self.txt_surname.setObjectName("txt_surname")
         self.verticalLayout_2.addWidget(self.txt_surname)
-        self.txt_birthDate = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_birthDate = QtWidgets.QDateEdit(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.txt_birthDate.sizePolicy().hasHeightForWidth())
+        self.txt_birthDate.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         self.txt_birthDate.setFont(font)
-        self.txt_birthDate.setStyleSheet("QLineEdit {\n"
+        self.txt_birthDate.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.txt_birthDate.setStyleSheet("QDateEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
+"}\n"
+"\n"
+"QDateEdit::drop-down {\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"width:25px;\n"
+"border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QCalendarWidget QToolButton {\n"
+"      height: 55px;\n"
+"      width: 100px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      icon-size: 28px, 28px;\n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);\n"
+"  }\n"
+"  QCalendarWidget QMenu {\n"
+"      width: 100px;\n"
+"      left: 20px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      background-color: rgb(100, 100, 200);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox { \n"
+"      width: 100px; \n"
+"      font-size:16px; \n"
+"      color: white; \n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"      selection-background-color: rgb(136, 136, 136);\n"
+"      selection-color: rgb(255, 255, 255);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:35px; }\n"
+"  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:35px;}\n"
+"  QCalendarWidget QSpinBox::up-arrow { width:46px;  height:46px; }\n"
+"  QCalendarWidget QSpinBox::down-arrow { width:46px;  height:46px; }\n"
+"   \n"
+"  /* header row */\n"
+"  QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }\n"
+"   \n"
+"  /* normal days */\n"
+"  QCalendarWidget QAbstractItemView:enabled \n"
+"  {\n"
+"      font-size:16px;  \n"
+"      color: rgb(180, 180, 180);  \n"
+"      background-color: rgb(235, 235, 235);\n"
+"      selection-background-color: rgb(100, 100, 200); \n"
+"    selection-color: white; \n"
+"  \n"
+"  }\n"
+"   \n"
+"  /* days in other months */\n"
+"  /* navigation bar */\n"
+"QCalendarWidget QWidget#qt_calendar_navigationbar\n"
+"{ \n"
+"  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"}\n"
+"\n"
+"QCalendarWidget QAbstractItemView:disabled \n"
+"{ \n"
+"color: rgb(64, 64, 64); \n"
 "}")
+        self.txt_birthDate.setAlignment(QtCore.Qt.AlignCenter)
+        self.txt_birthDate.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
+        self.txt_birthDate.setCalendarPopup(True)
         self.txt_birthDate.setObjectName("txt_birthDate")
         self.verticalLayout_2.addWidget(self.txt_birthDate)
         self.txt_code = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -266,5 +335,6 @@ class Ui_Registration(object):
         self.lbl_username.setText(_translate("Registration", "Username:"))
         self.lbl_password.setText(_translate("Registration", "Password:"))
         self.lbl_confirmPass.setText(_translate("Registration", "Confirm Password:"))
+        self.txt_birthDate.setDisplayFormat(_translate("Registration", "d/M/yyyy"))
         self.btn_submit.setText(_translate("Registration", "Submit"))
         self.btn_back.setText(_translate("Registration", "Back"))

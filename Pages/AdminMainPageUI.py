@@ -120,10 +120,11 @@ class Ui_AdminMain(object):
         self.tableWidget.setFrameShape(QtWidgets.QFrame.Panel)
         self.tableWidget.setTabKeyNavigation(True)
         self.tableWidget.setAlternatingRowColors(True)
+        self.tableWidget.setGridStyle(QtCore.Qt.SolidLine)
+        self.tableWidget.setRowCount(0)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
-        self.tableWidget.setRowCount(0)
-        self.tableWidget.horizontalHeader().setVisible(False)
+        self.tableWidget.horizontalHeader().setVisible(True)
         self.tableWidget.verticalHeader().setVisible(False)
 
         self.retranslateUi(AdminMain)
