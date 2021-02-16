@@ -253,7 +253,7 @@ class LessonDescriptionPage(QWidget):
             self.memberMainPage = MemberMainPage()
             self.memberMainPage.show()
             self.close()
-            message = 'Successfully'
+            message = 'You have successfully registered for the lesson'
             parent = self.memberMainPage
       
         elif(result == QMessageBox.No):
