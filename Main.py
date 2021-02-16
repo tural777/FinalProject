@@ -7,8 +7,8 @@ from PyQt5.QtWidgets import QApplication, QHeaderView, QStyle, QMainWindow, QMes
 
 # My Classes
 from Classes import *
-from Convertor import *
-from ToastNotifier import QToaster
+from Helper.Convertor import *
+from Helper.ToastNotifier import QToaster
 
 # User Interfaces
 from Pages.MainPageUI import Ui_Main
