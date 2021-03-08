@@ -23,7 +23,7 @@ class Ui_Login(object):
         Login.setFont(font)
         Login.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lbl_title = QtWidgets.QLabel(Login)
-        self.lbl_title.setGeometry(QtCore.QRect(210, 10, 401, 80))
+        self.lbl_title.setGeometry(QtCore.QRect(220, 10, 401, 80))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(35)

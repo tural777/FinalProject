@@ -1,42 +1,38 @@
 [
     {
-        "birthDate": "a",
+        "birthDate": "1/1/2000",
         "code": "a",
-        "confirmPassword": "",
         "name": "a",
-        "password": "",
-        "role": "Admin",
+        "password": "a",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 0,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Empty",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
+        "role": "Member",
         "surname": "a",
-        "username": ""
+        "username": "a"
     },
     {
-        "birthDate": "m",
-        "code": "m",
-        "confirmPassword": "m",
-        "name": "m",
+        "birthDate": "1/1/2000",
+        "code": "v",
+        "name": "v",
         "password": "",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 2,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Logo",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
         "role": "Member",
-        "surname": "m",
+        "surname": "v",
         "username": ""
-    },
-    {
-        "birthDate": "8/12/1992",
-        "code": "12345",
-        "confirmPassword": "tural123",
-        "name": "Tural",
-        "password": "tural123",
-        "role": "Member",
-        "surname": "Novruzov",
-        "username": "TuralHack"
-    },
-    {
-        "birthDate": "7/1/2021",
-        "code": "123",
-        "confirmPassword": "admin",
-        "name": "Admin",
-        "password": "admin",
-        "role": "Admin",
-        "surname": "Admin",
-        "username": "admin"
     }
 ]

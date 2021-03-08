@@ -78,10 +78,10 @@ QPushButton:checked{
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>140</x>
      <y>100</y>
-     <width>591</width>
-     <height>399</height>
+     <width>551</width>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -95,6 +95,12 @@ QPushButton:checked{
       </property>
       <item>
        <widget class="QLabel" name="lbl_lastClassAtt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -110,6 +116,12 @@ QPushButton:checked{
       </item>
       <item>
        <widget class="QLabel" name="lbl_TotNumOfClsAttThisMonth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -126,6 +138,12 @@ attended this month:</string>
       </item>
       <item>
        <widget class="QLabel" name="lbl_totalMonthlyFee">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -141,6 +159,12 @@ attended this month:</string>
       </item>
       <item>
        <widget class="QLabel" name="lbl_inputHeight">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -156,6 +180,12 @@ attended this month:</string>
       </item>
       <item>
        <widget class="QLabel" name="lbl_inputWeight">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -171,6 +201,12 @@ attended this month:</string>
       </item>
       <item>
        <widget class="QLabel" name="lbl_BMI">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -186,6 +222,12 @@ attended this month:</string>
       </item>
       <item>
        <widget class="QLabel" name="lbl_targetBMI">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>MS Shell Dlg 2</family>
@@ -213,61 +255,97 @@ attended this month:</string>
        <number>5</number>
       </property>
       <item>
-       <widget class="QLineEdit" name="txt_lastClassAtt">
+       <widget class="QLabel" name="lbl_textLastClassAtt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
           <pointsize>18</pointsize>
          </font>
         </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
         <property name="styleSheet">
-         <string notr="true">QLineEdit {
-padding: 1px;
-border-style: solid;
-border: 2px solid gray;
-border-radius: 8px;
-}</string>
+         <string notr="true">color: rgb(100, 100, 200);</string>
+        </property>
+        <property name="text">
+         <string>Empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="txt_TotNumOfClsAttThisMonth">
+       <widget class="QLabel" name="lbl_textTotNumOfClsAttThisMonth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
           <pointsize>18</pointsize>
          </font>
         </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
         <property name="styleSheet">
-         <string notr="true">QLineEdit {
-padding: 1px;
-border-style: solid;
-border: 2px solid gray;
-border-radius: 8px;
-}</string>
+         <string notr="true">color: rgb(100, 100, 200);</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="txt_totalMonthlyFee">
+       <widget class="QLabel" name="lbl_textTotalMonthlyFee">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
           <pointsize>18</pointsize>
          </font>
         </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
         <property name="styleSheet">
-         <string notr="true">QLineEdit {
-padding: 1px;
-border-style: solid;
-border: 2px solid gray;
-border-radius: 8px;
-}</string>
+         <string notr="true">color: rgb(100, 100, 200);</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="txt_inputHeight">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -280,12 +358,25 @@ padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
+color: rgb(100, 100, 200);
 }</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="txt_inputWeight">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -298,12 +389,25 @@ padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
+color: rgb(100, 100, 200);
 }</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="txt_BMI">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -316,12 +420,25 @@ padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
+color: rgb(100, 100, 200);
 }</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="txt_targetBMI">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Palatino Linotype</family>
@@ -334,7 +451,14 @@ padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
+color: rgb(100, 100, 200);
 }</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>

@@ -1,13 +1,33 @@
+import json
+
 class User():
-    def __init__(self, name, surname, birthDate, code, username, password, confirmPassword, role):
+    def __init__(self, name, surname, birthDate, code, username, password, role, personalReport):
         self.name = name
         self.surname = surname
         self.birthDate = birthDate
         self.code = code
         self.username = username
         self.password = password
-        self.confirmPassword = confirmPassword
         self.role = role
+        self.personalReport = personalReport
+
+        if(isinstance(personalReport, dict)):
+            self.personalReport = PersonalReport(**personalReport)
+
+
+
+
+class PersonalReport():
+    def __init__(self, lastClassAttended, TotNumOfClsAttThisMonth, 
+                            totalMonthlyFee, inputHeight, inputWeight, BMI, targetBMI):
+        self.lastClassAttended = lastClassAttended
+        self.TotNumOfClsAttThisMonth = TotNumOfClsAttThisMonth
+        self.totalMonthlyFee = totalMonthlyFee
+        self.inputHeight = inputHeight
+        self.inputWeight = inputWeight
+        self.BMI = BMI
+        self.targetBMI = targetBMI
+
 
 
 
@@ -20,18 +40,6 @@ class Lesson():
         self.price = price
         self.smallDescription = smallDescription
 
-
-
-class PersonalReport():
-     def __init__(self, lastClassAttended, totalNumberOfClassesAttendedThisMonth, 
-                            totalMonthlyFee, inputHeight, inputWeight, BMI, targetBMI):
-        self.lastClassAttended = lastClassAttended
-        self.totalNumberOfClassesAttendedThisMonth = totalNumberOfClassesAttendedThisMonth
-        self.totalMonthlyFee = totalMonthlyFee
-        self.inputHeight = inputHeight
-        self.inputWeight = inputWeight
-        self.BMI = BMI
-        self.targetBMI = targetBMI
 
 
 

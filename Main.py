@@ -27,7 +27,7 @@ from Pages.AddNoticePageUI import Ui_AddNotice
 lessonObjects = Convertor.readObjectsFromDatabase(Lesson, 'Tables/LessonTable.json')
 noticeObjects = Convertor.readObjectsFromDatabase(Notice, 'Tables/NoticeTable.json')
 userObjects = Convertor.readObjectsFromDatabase(User, 'Tables/UserTable.json')
-
+currentUserIndex = None
 
 
 ### Add Notice Page ###
@@ -228,6 +228,8 @@ class LessonDescriptionPage(QWidget):
 
         self.role = role
         self.lessonIndex = lessonIndex
+        self.lesson = lessonObjects[self.lessonIndex]
+
 
         self.ui.btn_back.clicked.connect(self.clickedBack)
         self.ui.btn_signUpForLesson.clicked.connect(self.clickedSignUpForLesson)
@@ -250,11 +252,19 @@ class LessonDescriptionPage(QWidget):
         result = QMessageBox.question(self,'Term Sport Complex','Are you sure ?', QMessageBox.Yes | QMessageBox.No)
 
         if(result == QMessageBox.Yes):
+            userObjects[currentUserIndex].personalReport.lastClassAttended = self.lesson.smallDescription
+            userObjects[currentUserIndex].personalReport.TotNumOfClsAttThisMonth += 1
+            #userObjects[currentUserIndex].personalReport.totalMonthlyFee += int(self.lesson.price)
+
+            Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
+
             self.memberMainPage = MemberMainPage()
             self.memberMainPage.show()
             self.close()
             message = 'You have successfully registered for the lesson'
             parent = self.memberMainPage
+
+            
       
         elif(result == QMessageBox.No):
             message = 'Canceled'
@@ -267,28 +277,19 @@ class LessonDescriptionPage(QWidget):
 
 
 
-
-
-       
-
-
-
-
-
     def showLessonDescription(self):
         if self.role == 'Admin':
             self.ui.btn_signUpForLesson.setVisible(False)
         else:
             self.ui.btn_signUpForLesson.setVisible(True)
 
-        lesson = lessonObjects[self.lessonIndex]
 
-        self.ui.lbl_edit_lessonType.setText(lesson.type)
-        self.ui.lbl_edit_date.setText(lesson.date)
-        self.ui.lbl_edit_time.setText(lesson.time)
-        self.ui.lbl_edit_teacher.setText(lesson.teacher)
-        self.ui.lbl_edit_price.setText(lesson.price)
-        self.ui.lbl_edit_description.setText(lesson.smallDescription)
+        self.ui.lbl_edit_lessonType.setText(self.lesson.type)
+        self.ui.lbl_edit_date.setText(self.lesson.date)
+        self.ui.lbl_edit_time.setText(self.lesson.time)
+        self.ui.lbl_edit_teacher.setText(self.lesson.teacher)
+        self.ui.lbl_edit_price.setText(self.lesson.price)
+        self.ui.lbl_edit_description.setText(self.lesson.smallDescription)
 
 
 
@@ -300,13 +301,26 @@ class PersonalReportPage(QWidget):
         self.ui = Ui_PersonalReport()
         self.ui.setupUi(self)
 
+        self.showReports()
+
         self.ui.btn_back.clicked.connect(self.clickedBack)
+
 
     def clickedBack(self):
         self.memberMainPage = MemberMainPage()
         self.memberMainPage.show()
         self.close()
 
+    def showReports(self):
+        currentUser = userObjects[currentUserIndex]
+
+        self.ui.lbl_textLastClassAtt.setText(currentUser.personalReport.lastClassAttended)
+        self.ui.lbl_textTotNumOfClsAttThisMonth.setText(str(currentUser.personalReport.TotNumOfClsAttThisMonth))
+        self.ui.lbl_textTotalMonthlyFee.setText(str(currentUser.personalReport.totalMonthlyFee))
+        self.ui.txt_inputHeight.setText(str(currentUser.personalReport.inputHeight))
+        self.ui.txt_inputWeight.setText(str(currentUser.personalReport.inputWeight))
+        self.ui.txt_BMI.setText(str(currentUser.personalReport.BMI))
+        self.ui.txt_targetBMI.setText(str(currentUser.personalReport.targetBMI))
 
 
 ### Important Notices Page ###
@@ -474,7 +488,7 @@ class RegistrationPage(QWidget):
                             desktop=False, timeout=2000, closable=False)
                         return
 
-                user = User(name,surname,birthDate,code,username,password,confirmPass,self.role)
+                user = User(name,surname,birthDate,code,username,password,self.role, PersonalReport('Empty', 0,0,0,0,0,0))
                 userObjects.append(user)
                 Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
 
@@ -523,8 +537,9 @@ class LoginPage(QWidget):
         self.close()
 
     def clickedSigIn(self):
+        global currentUserIndex
 
-
+        currentUserIndex = 0
         for user in userObjects:
             if self.role == 'Member':
                 if user.role == 'Member' and self.ui.txt_username.text() == user.username and self.ui.txt_password.text() == user.password:
@@ -538,6 +553,8 @@ class LoginPage(QWidget):
                     self.adminMainPage.show()
                     self.close()
                     break
+            currentUserIndex += 1
+            
         else:
             QToaster.showMessage(self, 'The email or password is incorrect', 
                     QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),

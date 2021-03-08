@@ -1,5 +1,6 @@
 import json
 
+
 class Convertor():
 
     @staticmethod
@@ -25,8 +26,9 @@ class Convertor():
         if len(objectList):
             objectDicts = []
             for object in objectList:
-                objectDicts.append(object.__dict__)
-            
+                objectDicts.append(json.loads(
+                        json.dumps(object, default=lambda o: o.__dict__)))
+
             try:
                 with open(json_filename, "w", encoding='utf-8') as f:
                     json.dump(objectDicts, f, indent=4, sort_keys=True)
