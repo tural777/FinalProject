@@ -1,7 +1,7 @@
 [
     {
         "date": "12/1/2021",
-        "price": "10 Azn",
+        "price": "10",
         "smallDescription": "Function",
         "teacher": "Tural",
         "time": "4:00 PM",
@@ -9,7 +9,7 @@
     },
     {
         "date": "1/2/2021",
-        "price": "9 Azn",
+        "price": "9",
         "smallDescription": "Class",
         "teacher": "Elvin",
         "time": "1:00 PM",
@@ -17,7 +17,7 @@
     },
     {
         "date": "2/2/2021",
-        "price": "11 Azn",
+        "price": "11",
         "smallDescription": "Logo",
         "teacher": "Nermin",
         "time": "3:00 PM",
@@ -25,10 +25,42 @@
     },
     {
         "date": "18/2/2021",
-        "price": "25.00 AZN",
+        "price": "25.00",
         "smallDescription": "Delagate",
         "teacher": "Tural Novruzov",
         "time": "7:00 PM",
         "type": "Programmer"
+    },
+    {
+        "date": "1/1/2021",
+        "price": "10.00",
+        "smallDescription": "testdesc",
+        "teacher": "Filankes Filankesov",
+        "time": "12:00 AM",
+        "type": "Test1"
+    },
+    {
+        "date": "1/1/2021",
+        "price": "11.55",
+        "smallDescription": "test2",
+        "teacher": "test2",
+        "time": "12:00 AM",
+        "type": "test2"
+    },
+    {
+        "date": "1/1/2021",
+        "price": "11.11",
+        "smallDescription": "test3",
+        "teacher": "test3",
+        "time": "12:00 AM",
+        "type": "test3"
+    },
+    {
+        "date": "1/1/2021",
+        "price": "112",
+        "smallDescription": "asdasdas",
+        "teacher": "sadasda",
+        "time": "12:00 AM",
+        "type": "aaa"
     }
 ]

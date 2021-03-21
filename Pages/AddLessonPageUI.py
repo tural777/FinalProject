@@ -154,6 +154,7 @@ class Ui_AddLesson(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_lessonType.setClearButtonEnabled(True)
         self.txt_lessonType.setObjectName("txt_lessonType")
         self.verticalLayout_2.addWidget(self.txt_lessonType)
         self.txt_teacher = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -167,6 +168,7 @@ class Ui_AddLesson(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_teacher.setClearButtonEnabled(True)
         self.txt_teacher.setObjectName("txt_teacher")
         self.verticalLayout_2.addWidget(self.txt_teacher)
         self.txt_date = QtWidgets.QDateEdit(self.horizontalLayoutWidget)
@@ -275,6 +277,8 @@ class Ui_AddLesson(object):
         self.txt_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.txt_time.setObjectName("txt_time")
         self.verticalLayout_2.addWidget(self.txt_time)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.txt_price = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
@@ -286,8 +290,22 @@ class Ui_AddLesson(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_price.setInputMask("")
+        self.txt_price.setMaxLength(10)
+        self.txt_price.setClearButtonEnabled(True)
         self.txt_price.setObjectName("txt_price")
-        self.verticalLayout_2.addWidget(self.txt_price)
+        self.horizontalLayout_2.addWidget(self.txt_price)
+        self.lbl_priceAZN = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_priceAZN.setFont(font)
+        self.lbl_priceAZN.setStyleSheet("color: rgb(100, 100, 200);")
+        self.lbl_priceAZN.setObjectName("lbl_priceAZN")
+        self.horizontalLayout_2.addWidget(self.lbl_priceAZN)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
         self.txt_description = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
@@ -299,6 +317,7 @@ class Ui_AddLesson(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_description.setClearButtonEnabled(True)
         self.txt_description.setObjectName("txt_description")
         self.verticalLayout_2.addWidget(self.txt_description)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
@@ -327,5 +346,8 @@ class Ui_AddLesson(object):
         self.lbl_time.setText(_translate("AddLesson", "Time:"))
         self.lbl_price.setText(_translate("AddLesson", "Price:"))
         self.lbl_description.setText(_translate("AddLesson", "Small description: "))
+        self.txt_teacher.setPlaceholderText(_translate("AddLesson", "Fullname"))
         self.txt_date.setDisplayFormat(_translate("AddLesson", "d/M/yyyy"))
+        self.txt_price.setPlaceholderText(_translate("AddLesson", "Only digits"))
+        self.lbl_priceAZN.setText(_translate("AddLesson", "AZN"))
         self.lbl_title.setText(_translate("AddLesson", "Add a Lesson"))

@@ -198,6 +198,9 @@ border: 2px solid gray;
 border-radius: 8px;
 }</string>
         </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -215,6 +218,9 @@ border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
 }</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -333,6 +339,9 @@ border: 2px solid gray;
 border-radius: 8px;
 }</string>
         </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -350,6 +359,9 @@ border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
 }</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -372,6 +384,9 @@ border-radius: 8px;
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>
         </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -392,6 +407,9 @@ border-radius: 8px;
         </property>
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

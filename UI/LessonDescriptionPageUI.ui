@@ -78,7 +78,7 @@ QPushButton:checked{
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>140</x>
      <y>120</y>
      <width>531</width>
      <height>357</height>
@@ -183,9 +183,28 @@ QPushButton:checked{
      </layout>
     </item>
     <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLabel" name="lbl_edit_lessonType">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Comic Sans MS</family>
@@ -205,6 +224,12 @@ QPushButton:checked{
       </item>
       <item>
        <widget class="QLabel" name="lbl_edit_teacher">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Comic Sans MS</family>
@@ -224,6 +249,12 @@ QPushButton:checked{
       </item>
       <item>
        <widget class="QLabel" name="lbl_edit_date">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Comic Sans MS</family>
@@ -243,6 +274,12 @@ QPushButton:checked{
       </item>
       <item>
        <widget class="QLabel" name="lbl_edit_time">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Comic Sans MS</family>
@@ -261,26 +298,60 @@ QPushButton:checked{
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="lbl_edit_price">
-        <property name="font">
-         <font>
-          <family>Comic Sans MS</family>
-          <pointsize>18</pointsize>
-          <weight>9</weight>
-          <italic>true</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 75 italic 18pt &quot;Comic Sans MS&quot;;</string>
-        </property>
-        <property name="text">
-         <string>     ?</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="lbl_edit_price">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Comic Sans MS</family>
+            <pointsize>18</pointsize>
+            <weight>9</weight>
+            <italic>true</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 italic 18pt &quot;Comic Sans MS&quot;;</string>
+          </property>
+          <property name="text">
+           <string>     ?</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_priceAZN">
+          <property name="font">
+           <font>
+            <family>Palatino Linotype</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(100, 100, 200);</string>
+          </property>
+          <property name="text">
+           <string>AZN</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
        <widget class="QLabel" name="lbl_edit_description">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Comic Sans MS</family>

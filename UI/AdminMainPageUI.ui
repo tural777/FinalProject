@@ -215,6 +215,9 @@ QPushButton:checked{
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
    </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
    <property name="tabKeyNavigation">
     <bool>true</bool>
    </property>

@@ -3,19 +3,19 @@
         "birthDate": "1/1/2000",
         "code": "a",
         "name": "a",
-        "password": "a",
+        "password": "",
         "personalReport": {
             "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
+            "TotNumOfClsAttThisMonth": 6,
             "inputHeight": 0,
             "inputWeight": 0,
-            "lastClassAttended": "Empty",
+            "lastClassAttended": "Logo",
             "targetBMI": 0,
-            "totalMonthlyFee": 0
+            "totalMonthlyFee": 52.66
         },
         "role": "Member",
         "surname": "a",
-        "username": "a"
+        "username": ""
     },
     {
         "birthDate": "1/1/2000",
@@ -33,6 +33,24 @@
         },
         "role": "Member",
         "surname": "v",
+        "username": ""
+    },
+    {
+        "birthDate": "1/1/2000",
+        "code": "a",
+        "name": "a",
+        "password": "",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 0,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Empty",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
+        "role": "Admin",
+        "surname": "a",
         "username": ""
     }
 ]

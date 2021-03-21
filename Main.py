@@ -2,7 +2,7 @@ import sys
 
 # PyQt5 modules
 from PyQt5 import QtGui
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import QRegExp, Qt
 from PyQt5.QtWidgets import QApplication, QHeaderView, QStyle, QMainWindow, QMessageBox, QPushButton, QTableWidgetItem, QWidget
 
 # My Classes
@@ -77,8 +77,15 @@ class AddLessonPage(QWidget):
         self.ui = Ui_AddLesson()
         self.ui.setupUi(self)
 
+
+        regVal = QtGui.QRegExpValidator(QRegExp('[0-9]*\.?[0-9][0-9]'))
+        self.ui.txt_price.setValidator(regVal)
+
+
         self.ui.btn_back.clicked.connect(self.clickedBack)
         self.ui.btn_addLesson.clicked.connect(self.clickedAddLesson)
+
+
 
 
     def clickedBack(self):
@@ -94,6 +101,7 @@ class AddLessonPage(QWidget):
         teacher = self.ui.txt_teacher.text()
         price = self.ui.txt_price.text()
         description = self.ui.txt_description.text()
+
         
         if lessonType and date and time and teacher and price and description:
             lesson = Lesson(lessonType,date,time,teacher,price,description)
@@ -254,7 +262,7 @@ class LessonDescriptionPage(QWidget):
         if(result == QMessageBox.Yes):
             userObjects[currentUserIndex].personalReport.lastClassAttended = self.lesson.smallDescription
             userObjects[currentUserIndex].personalReport.TotNumOfClsAttThisMonth += 1
-            #userObjects[currentUserIndex].personalReport.totalMonthlyFee += int(self.lesson.price)
+            userObjects[currentUserIndex].personalReport.totalMonthlyFee += float(self.lesson.price)
 
             Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
 

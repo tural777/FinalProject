@@ -247,6 +247,9 @@ border: 2px solid gray;
 border-radius: 8px;
 }</string>
         </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -264,6 +267,12 @@ border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
 }</string>
+        </property>
+        <property name="placeholderText">
+         <string>Fullname</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -416,22 +425,56 @@ border-radius: 8px;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="txt_price">
-        <property name="font">
-         <font>
-          <family>Palatino Linotype</family>
-          <pointsize>18</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit {
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="txt_price">
+          <property name="font">
+           <font>
+            <family>Palatino Linotype</family>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
 padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
 }</string>
-        </property>
-       </widget>
+          </property>
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>10</number>
+          </property>
+          <property name="placeholderText">
+           <string>Only digits</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_priceAZN">
+          <property name="font">
+           <font>
+            <family>Palatino Linotype</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(100, 100, 200);</string>
+          </property>
+          <property name="text">
+           <string>AZN</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
        <widget class="QLineEdit" name="txt_description">
@@ -448,6 +491,9 @@ border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
 }</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

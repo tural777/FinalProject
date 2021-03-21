@@ -146,6 +146,7 @@ class Ui_AddNotice(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_notice.setClearButtonEnabled(True)
         self.txt_notice.setObjectName("txt_notice")
         self.verticalLayout_2.addWidget(self.txt_notice)
         self.horizontalLayout.addLayout(self.verticalLayout_2)

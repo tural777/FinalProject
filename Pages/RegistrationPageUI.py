@@ -118,6 +118,7 @@ class Ui_Registration(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_name.setClearButtonEnabled(True)
         self.txt_name.setObjectName("txt_name")
         self.verticalLayout_2.addWidget(self.txt_name)
         self.txt_surname = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -131,6 +132,7 @@ class Ui_Registration(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_surname.setClearButtonEnabled(True)
         self.txt_surname.setObjectName("txt_surname")
         self.verticalLayout_2.addWidget(self.txt_surname)
         self.txt_birthDate = QtWidgets.QDateEdit(self.horizontalLayoutWidget)
@@ -226,6 +228,7 @@ class Ui_Registration(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_code.setClearButtonEnabled(True)
         self.txt_code.setObjectName("txt_code")
         self.verticalLayout_2.addWidget(self.txt_code)
         self.txt_username = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -239,6 +242,7 @@ class Ui_Registration(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_username.setClearButtonEnabled(True)
         self.txt_username.setObjectName("txt_username")
         self.verticalLayout_2.addWidget(self.txt_username)
         self.txt_password = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -253,6 +257,7 @@ class Ui_Registration(object):
 "border-radius: 8px;\n"
 "}")
         self.txt_password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.txt_password.setClearButtonEnabled(True)
         self.txt_password.setObjectName("txt_password")
         self.verticalLayout_2.addWidget(self.txt_password)
         self.txt_confirmPass = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -267,6 +272,7 @@ class Ui_Registration(object):
 "border-radius: 8px;\n"
 "}")
         self.txt_confirmPass.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.txt_confirmPass.setClearButtonEnabled(True)
         self.txt_confirmPass.setObjectName("txt_confirmPass")
         self.verticalLayout_2.addWidget(self.txt_confirmPass)
         self.horizontalLayout.addLayout(self.verticalLayout_2)

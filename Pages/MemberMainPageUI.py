@@ -92,6 +92,7 @@ class Ui_MemberMain(object):
         font.setPointSize(14)
         self.tableWidget.setFont(font)
         self.tableWidget.setFrameShape(QtWidgets.QFrame.Panel)
+        self.tableWidget.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.tableWidget.setTabKeyNavigation(True)
         self.tableWidget.setAlternatingRowColors(True)
         self.tableWidget.setColumnCount(0)

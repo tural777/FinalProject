@@ -126,6 +126,7 @@ class Ui_Login(object):
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}")
+        self.txt_username.setClearButtonEnabled(True)
         self.txt_username.setObjectName("txt_username")
         self.verticalLayout_2.addWidget(self.txt_username)
         self.txt_password = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -140,6 +141,7 @@ class Ui_Login(object):
 "border-radius: 8px;\n"
 "}")
         self.txt_password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.txt_password.setClearButtonEnabled(True)
         self.txt_password.setObjectName("txt_password")
         self.verticalLayout_2.addWidget(self.txt_password)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
