@@ -306,7 +306,7 @@ class AddLessonPage(QWidget):
             message = f'{description} was successfully added'
             parent = adminMainPage
         else:
-            message = 'Empty input'
+            message = 'Please fill all the fields'
             parent = self
 
         QToaster.showMessage(parent, message, 
@@ -494,7 +494,7 @@ class LessonDescriptionPage(QWidget):
                 message = f'{description} was successfully updated'
                 parent = adminMainPage
             else:
-                message = 'Empty input'
+                message = 'Please fill all the fields'
                 parent = self
 
             QToaster.showMessage(parent, message, 
@@ -904,36 +904,47 @@ class RegistrationPage(QWidget):
         confirmPass = self.ui.txt_confirmPass.text()
 
         if name and surname and birthDate and code and username and password and confirmPass:
-            if password == confirmPass:
-                for userObject in userObjects:
-                    if userObject.username == username:
-                        QToaster.showMessage(self, 'Already exists', 
+            if len(name)>=3 and len(surname)>=3 and len(username)>=3:
+                if password == confirmPass:
+                    if len(password)>=8:
+                        for userObject in userObjects:
+                            if userObject.username == username:
+                                QToaster.showMessage(self, 'Already exists', 
+                                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                                    desktop=False, timeout=2000, closable=False)
+                                return
+
+                        user = User(name,surname,birthDate,code,username,password,self.role, PersonalReport('Empty', 0,0,0,0,0,0))
+                        userObjects.append(user)
+                        Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
+
+                        
+                        loginPage.ui.txt_username.clear()
+                        loginPage.ui.txt_password.clear()
+                        loginPage.changeRole(self.role)
+                        loginPage.setGeometry(self.geometry())
+                        loginPage.show()
+                        self.close()
+
+                        QToaster.showMessage(loginPage, 'Successfully', 
                             QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
                             desktop=False, timeout=2000, closable=False)
-                        return
 
-                user = User(name,surname,birthDate,code,username,password,self.role, PersonalReport('Empty', 0,0,0,0,0,0))
-                userObjects.append(user)
-                Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
+                    else:
+                        QToaster.showMessage(self, 'Wrong: Password should be at least 8 char', 
+                            QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                            desktop=False, timeout=2000, closable=False)
 
-                
-                loginPage.ui.txt_username.clear()
-                loginPage.ui.txt_password.clear()
-                loginPage.changeRole(self.role)
-                loginPage.setGeometry(self.geometry())
-                loginPage.show()
-                self.close()
-
-                QToaster.showMessage(loginPage, 'Successfully', 
-                    QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
-                    desktop=False, timeout=2000, closable=False)
-
+                else:
+                    QToaster.showMessage(self, 'Wrong: Confirm Password', 
+                        QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
+                        desktop=False, timeout=2000, closable=False)
             else:
-                QToaster.showMessage(self, 'Wrong: Confirm Password', 
+                QToaster.showMessage(self, 'Wrong: Name, Surname or Username should be at least 3 char', 
                     QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
                     desktop=False, timeout=2000, closable=False)
         else:
-            QToaster.showMessage(self, 'Empty input', 
+            QToaster.showMessage(self, 'Please fill all the fields', 
                     QStyle.SP_MessageBoxCritical, corner=Qt.Corner(1),
                     desktop=False, timeout=2000, closable=False)
 

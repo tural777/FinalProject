@@ -337,7 +337,7 @@ class Ui_LessonDescription(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_description.sizePolicy().hasHeightForWidth())
         self.lbl_edit_description.setSizePolicy(sizePolicy)
-        self.lbl_edit_description.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.lbl_edit_description.setMaximumSize(QtCore.QSize(16777215, 55))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
@@ -345,7 +345,7 @@ class Ui_LessonDescription(object):
         font.setItalic(True)
         font.setWeight(50)
         self.lbl_edit_description.setFont(font)
-        self.lbl_edit_description.setStyleSheet("padding-bottom: 3px;\n"
+        self.lbl_edit_description.setStyleSheet("padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"

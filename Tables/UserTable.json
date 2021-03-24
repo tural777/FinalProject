@@ -6,33 +6,15 @@
         "password": "",
         "personalReport": {
             "BMI": 0.55,
-            "TotNumOfClsAttThisMonth": 19,
+            "TotNumOfClsAttThisMonth": 20,
             "inputHeight": 2.01,
             "inputWeight": 2.24,
-            "lastClassAttended": "KickBoxing",
+            "lastClassAttended": "Zumba",
             "targetBMI": 13.0,
-            "totalMonthlyFee": 332.65
+            "totalMonthlyFee": 347.65
         },
         "role": "Member",
         "surname": "a",
-        "username": ""
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "v",
-        "name": "v",
-        "password": "",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Member",
-        "surname": "v",
         "username": ""
     },
     {
@@ -59,13 +41,13 @@
         "name": "m",
         "password": "m",
         "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
+            "BMI": 0.16,
+            "TotNumOfClsAttThisMonth": 1,
+            "inputHeight": 12.0,
+            "inputWeight": 23.0,
+            "lastClassAttended": "Water Aerobics",
+            "targetBMI": 11.0,
+            "totalMonthlyFee": 30.0
         },
         "role": "Member",
         "surname": "m",
@@ -196,5 +178,59 @@
         "role": "Member",
         "surname": "t",
         "username": "t"
+    },
+    {
+        "birthDate": "1/1/2000",
+        "code": "asd",
+        "name": "asd",
+        "password": "asd",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 0,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Empty",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
+        "role": "Admin",
+        "surname": "asd",
+        "username": "asd"
+    },
+    {
+        "birthDate": "1/1/2000",
+        "code": "aaa",
+        "name": "aaa",
+        "password": "aaa",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 0,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Empty",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
+        "role": "Admin",
+        "surname": "aaa",
+        "username": "aaaa"
+    },
+    {
+        "birthDate": "1/1/2000",
+        "code": "bb",
+        "name": "bbb",
+        "password": "bbbbbbbb",
+        "personalReport": {
+            "BMI": 0,
+            "TotNumOfClsAttThisMonth": 0,
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Empty",
+            "targetBMI": 0,
+            "totalMonthlyFee": 0
+        },
+        "role": "Admin",
+        "surname": "bbb",
+        "username": "bbb"
     }
 ]
