@@ -37,16 +37,16 @@
   <widget class="QLabel" name="lbl_title">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>10</y>
-     <width>521</width>
-     <height>80</height>
+     <x>210</x>
+     <y>-10</y>
+     <width>361</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Palatino Linotype</family>
-     <pointsize>35</pointsize>
+     <pointsize>25</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -143,11 +143,20 @@ QPushButton:checked{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>90</y>
-     <width>371</width>
-     <height>81</height>
+     <x>230</x>
+     <y>50</y>
+     <width>321</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>Upcoming Class Schedules</string>
@@ -198,9 +207,9 @@ QPushButton:checked{
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>170</y>
+     <y>162</y>
      <width>741</width>
-     <height>331</height>
+     <height>351</height>
     </rect>
    </property>
    <property name="font">
@@ -239,6 +248,167 @@ QPushButton:checked{
    <attribute name="verticalHeaderVisible">
     <bool>false</bool>
    </attribute>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Price">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>120</y>
+     <width>91</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFontComboBox::down-arrow {
+      image: url(:/buttons/Icons/down_arrow.png);
+}
+ 
+QFontComboBox {
+      border: 1px solid gray;
+      border-radius: 3px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Type</string>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Price">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>120</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(100, 100, 200);</string>
+   </property>
+   <property name="text">
+    <string>Price</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Type">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>120</y>
+     <width>181</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFontComboBox {
+      border: 1px solid gray;
+      border-radius: 13px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Place</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Teacher">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>120</y>
+     <width>180</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFontComboBox::down-arrow {
+      image: url(:/buttons/Icons/down_arrow.png);
+}
+ 
+QFontComboBox {
+      border: 1px solid gray;
+      border-radius: 3px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Type</string>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Teacher">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>120</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(100, 100, 200);</string>
+   </property>
+   <property name="text">
+    <string>Teacher</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Type">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Palatino Linotype</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(100, 100, 200);</string>
+   </property>
+   <property name="text">
+    <string>Type</string>
+   </property>
   </widget>
  </widget>
  <resources/>

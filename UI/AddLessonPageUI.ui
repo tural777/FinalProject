@@ -405,7 +405,8 @@ padding: 1px;
 border-style: solid;
 border: 2px solid gray;
 border-radius: 8px;
-}</string>
+}
+</string>
         </property>
         <property name="frame">
          <bool>false</bool>

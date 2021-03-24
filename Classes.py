@@ -32,7 +32,8 @@ class PersonalReport():
 
 
 class Lesson():
-    def __init__(self, type, date, time, teacher, price, smallDescription):
+    def __init__(self, id, type, date, time, teacher, price, smallDescription):
+        self.id = id
         self.type = type
         self.date = date
         self.time = time

@@ -48,7 +48,7 @@ class Ui_LessonDescription(object):
 "}")
         self.btn_back.setObjectName("btn_back")
         self.horizontalLayoutWidget = QtWidgets.QWidget(LessonDescription)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(140, 120, 531, 357))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(90, 120, 631, 371))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -57,6 +57,11 @@ class Ui_LessonDescription(object):
         self.verticalLayout.setSpacing(7)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lbl_lessonType = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_lessonType.sizePolicy().hasHeightForWidth())
+        self.lbl_lessonType.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -66,6 +71,11 @@ class Ui_LessonDescription(object):
         self.lbl_lessonType.setObjectName("lbl_lessonType")
         self.verticalLayout.addWidget(self.lbl_lessonType)
         self.lbl_teacher = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_teacher.sizePolicy().hasHeightForWidth())
+        self.lbl_teacher.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -75,6 +85,11 @@ class Ui_LessonDescription(object):
         self.lbl_teacher.setObjectName("lbl_teacher")
         self.verticalLayout.addWidget(self.lbl_teacher)
         self.lbl_date = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_date.sizePolicy().hasHeightForWidth())
+        self.lbl_date.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -84,6 +99,11 @@ class Ui_LessonDescription(object):
         self.lbl_date.setObjectName("lbl_date")
         self.verticalLayout.addWidget(self.lbl_date)
         self.lbl_time = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_time.sizePolicy().hasHeightForWidth())
+        self.lbl_time.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -93,6 +113,11 @@ class Ui_LessonDescription(object):
         self.lbl_time.setObjectName("lbl_time")
         self.verticalLayout.addWidget(self.lbl_time)
         self.lbl_price = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_price.sizePolicy().hasHeightForWidth())
+        self.lbl_price.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -102,6 +127,11 @@ class Ui_LessonDescription(object):
         self.lbl_price.setObjectName("lbl_price")
         self.verticalLayout.addWidget(self.lbl_price)
         self.lbl_description = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_description.sizePolicy().hasHeightForWidth())
+        self.lbl_description.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(16)
@@ -111,93 +141,186 @@ class Ui_LessonDescription(object):
         self.lbl_description.setObjectName("lbl_description")
         self.verticalLayout.addWidget(self.lbl_description)
         self.horizontalLayout.addLayout(self.verticalLayout)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.lbl_edit_lessonType = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.lbl_edit_lessonType = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_lessonType.sizePolicy().hasHeightForWidth())
         self.lbl_edit_lessonType.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(9)
         self.lbl_edit_lessonType.setFont(font)
-        self.lbl_edit_lessonType.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_lessonType.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
+        self.lbl_edit_lessonType.setClearButtonEnabled(True)
         self.lbl_edit_lessonType.setObjectName("lbl_edit_lessonType")
-        self.verticalLayout_2.addWidget(self.lbl_edit_lessonType)
-        self.lbl_edit_teacher = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.verticalLayout_3.addWidget(self.lbl_edit_lessonType)
+        self.lbl_edit_teacher = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_teacher.sizePolicy().hasHeightForWidth())
         self.lbl_edit_teacher.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(9)
         self.lbl_edit_teacher.setFont(font)
-        self.lbl_edit_teacher.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_teacher.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
+        self.lbl_edit_teacher.setClearButtonEnabled(True)
         self.lbl_edit_teacher.setObjectName("lbl_edit_teacher")
-        self.verticalLayout_2.addWidget(self.lbl_edit_teacher)
-        self.lbl_edit_date = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.verticalLayout_3.addWidget(self.lbl_edit_teacher)
+        self.lbl_edit_date = QtWidgets.QDateEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_date.sizePolicy().hasHeightForWidth())
         self.lbl_edit_date.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(9)
         self.lbl_edit_date.setFont(font)
-        self.lbl_edit_date.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_date.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.lbl_edit_date.setStyleSheet("QDateEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}\n"
+"\n"
+"QDateEdit::drop-down {\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"width:25px;\n"
+"border: 1px solid gray;\n"
+"}\n"
+"\n"
+"QCalendarWidget QToolButton {\n"
+"      height: 55px;\n"
+"      width: 100px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      icon-size: 28px, 28px;\n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);\n"
+"  }\n"
+"  QCalendarWidget QMenu {\n"
+"      width: 100px;\n"
+"      left: 20px;\n"
+"      color: white;\n"
+"      font-size: 16px;\n"
+"      background-color: rgb(100, 100, 200);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox { \n"
+"      width: 100px; \n"
+"      font-size:16px; \n"
+"      color: white; \n"
+"      background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"      selection-background-color: rgb(136, 136, 136);\n"
+"      selection-color: rgb(255, 255, 255);\n"
+"  }\n"
+"  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:35px; }\n"
+"  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:35px;}\n"
+"  QCalendarWidget QSpinBox::up-arrow { width:46px;  height:46px; }\n"
+"  QCalendarWidget QSpinBox::down-arrow { width:46px;  height:46px; }\n"
+"   \n"
+"  /* header row */\n"
+"  QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }\n"
+"   \n"
+"  /* normal days */\n"
+"  QCalendarWidget QAbstractItemView:enabled \n"
+"  {\n"
+"      font-size:16px;  \n"
+"      color: rgb(180, 180, 180);  \n"
+"      background-color: rgb(235, 235, 235);\n"
+"      selection-background-color: rgb(100, 100, 200); \n"
+"    selection-color: white; \n"
+"  \n"
+"  }\n"
+"   \n"
+"  /* days in other months */\n"
+"  /* navigation bar */\n"
+"QCalendarWidget QWidget#qt_calendar_navigationbar\n"
+"{ \n"
+"  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); \n"
+"}\n"
+"\n"
+"QCalendarWidget QAbstractItemView:disabled \n"
+"{ \n"
+"color: rgb(64, 64, 64); \n"
+"}")
+        self.lbl_edit_date.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_edit_date.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
+        self.lbl_edit_date.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.lbl_edit_date.setCalendarPopup(True)
         self.lbl_edit_date.setObjectName("lbl_edit_date")
-        self.verticalLayout_2.addWidget(self.lbl_edit_date)
-        self.lbl_edit_time = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.verticalLayout_3.addWidget(self.lbl_edit_date)
+        self.lbl_edit_time = QtWidgets.QTimeEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_time.sizePolicy().hasHeightForWidth())
         self.lbl_edit_time.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(9)
         self.lbl_edit_time.setFont(font)
-        self.lbl_edit_time.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_time.setStyleSheet("QDateTimeEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}\n"
+"")
+        self.lbl_edit_time.setFrame(False)
+        self.lbl_edit_time.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_edit_time.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.lbl_edit_time.setCalendarPopup(True)
+        self.lbl_edit_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.lbl_edit_time.setObjectName("lbl_edit_time")
-        self.verticalLayout_2.addWidget(self.lbl_edit_time)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.lbl_edit_price = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.verticalLayout_3.addWidget(self.lbl_edit_time)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.lbl_edit_price = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_price.sizePolicy().hasHeightForWidth())
         self.lbl_edit_price.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(9)
         self.lbl_edit_price.setFont(font)
-        self.lbl_edit_price.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_price.setStyleSheet("QLineEdit {\n"
+"padding: 1px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"}")
+        self.lbl_edit_price.setInputMask("")
+        self.lbl_edit_price.setMaxLength(10)
+        self.lbl_edit_price.setClearButtonEnabled(True)
         self.lbl_edit_price.setObjectName("lbl_edit_price")
-        self.horizontalLayout_2.addWidget(self.lbl_edit_price)
+        self.horizontalLayout_3.addWidget(self.lbl_edit_price)
         self.lbl_priceAZN = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_priceAZN.sizePolicy().hasHeightForWidth())
+        self.lbl_priceAZN.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
@@ -206,24 +329,33 @@ class Ui_LessonDescription(object):
         self.lbl_priceAZN.setFont(font)
         self.lbl_priceAZN.setStyleSheet("color: rgb(100, 100, 200);")
         self.lbl_priceAZN.setObjectName("lbl_priceAZN")
-        self.horizontalLayout_2.addWidget(self.lbl_priceAZN)
-        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
-        self.lbl_edit_description = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.horizontalLayout_3.addWidget(self.lbl_priceAZN)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
+        self.lbl_edit_description = QtWidgets.QTextEdit(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_edit_description.sizePolicy().hasHeightForWidth())
         self.lbl_edit_description.setSizePolicy(sizePolicy)
+        self.lbl_edit_description.setMaximumSize(QtCore.QSize(16777215, 60))
         font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
+        font.setFamily("Palatino Linotype")
         font.setPointSize(18)
         font.setBold(False)
         font.setItalic(True)
-        font.setWeight(9)
+        font.setWeight(50)
         self.lbl_edit_description.setFont(font)
-        self.lbl_edit_description.setStyleSheet("font: 75 italic 18pt \"Comic Sans MS\";")
+        self.lbl_edit_description.setStyleSheet("padding-bottom: 3px;\n"
+"border-style: solid;\n"
+"border: 2px solid gray;\n"
+"border-radius: 8px;\n"
+"")
+        self.lbl_edit_description.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.lbl_edit_description.setLineWrapMode(QtWidgets.QTextEdit.NoWrap)
+        self.lbl_edit_description.setReadOnly(True)
         self.lbl_edit_description.setObjectName("lbl_edit_description")
-        self.verticalLayout_2.addWidget(self.lbl_edit_description)
+        self.verticalLayout_3.addWidget(self.lbl_edit_description)
+        self.verticalLayout_2.addLayout(self.verticalLayout_3)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
         self.btn_signUpForLesson = QtWidgets.QPushButton(LessonDescription)
         self.btn_signUpForLesson.setGeometry(QtCore.QRect(30, 525, 250, 50))
@@ -251,7 +383,7 @@ class Ui_LessonDescription(object):
 "}")
         self.btn_signUpForLesson.setObjectName("btn_signUpForLesson")
         self.lbl_title = QtWidgets.QLabel(LessonDescription)
-        self.lbl_title.setGeometry(QtCore.QRect(140, 10, 511, 80))
+        self.lbl_title.setGeometry(QtCore.QRect(140, 10, 511, 81))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(35)
@@ -260,6 +392,31 @@ class Ui_LessonDescription(object):
         self.lbl_title.setFont(font)
         self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
+        self.btn_edit = QtWidgets.QPushButton(LessonDescription)
+        self.btn_edit.setGeometry(QtCore.QRect(400, 525, 180, 50))
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setUnderline(False)
+        self.btn_edit.setFont(font)
+        self.btn_edit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_edit.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"    color: #FFFFFF;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #9E9E9E;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
+        self.btn_edit.setObjectName("btn_edit")
 
         self.retranslateUi(LessonDescription)
         QtCore.QMetaObject.connectSlotsByName(LessonDescription)
@@ -274,12 +431,10 @@ class Ui_LessonDescription(object):
         self.lbl_time.setText(_translate("LessonDescription", "Time:"))
         self.lbl_price.setText(_translate("LessonDescription", "Price:"))
         self.lbl_description.setText(_translate("LessonDescription", "Small description: "))
-        self.lbl_edit_lessonType.setText(_translate("LessonDescription", "     ?"))
-        self.lbl_edit_teacher.setText(_translate("LessonDescription", "     ?"))
-        self.lbl_edit_date.setText(_translate("LessonDescription", "     ?"))
-        self.lbl_edit_time.setText(_translate("LessonDescription", "     ?"))
-        self.lbl_edit_price.setText(_translate("LessonDescription", "     ?"))
+        self.lbl_edit_teacher.setPlaceholderText(_translate("LessonDescription", "Fullname"))
+        self.lbl_edit_date.setDisplayFormat(_translate("LessonDescription", "d/M/yyyy"))
+        self.lbl_edit_price.setPlaceholderText(_translate("LessonDescription", "Only digits"))
         self.lbl_priceAZN.setText(_translate("LessonDescription", "AZN"))
-        self.lbl_edit_description.setText(_translate("LessonDescription", "     ?"))
         self.btn_signUpForLesson.setText(_translate("LessonDescription", "Sign-Up for lesson"))
         self.lbl_title.setText(_translate("LessonDescription", "Lesson Description"))
+        self.btn_edit.setText(_translate("LessonDescription", "Edit"))

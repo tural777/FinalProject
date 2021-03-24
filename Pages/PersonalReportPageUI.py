@@ -172,6 +172,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.lbl_textLastClassAtt.setFont(font)
         self.lbl_textLastClassAtt.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lbl_textLastClassAtt.setStyleSheet("color: rgb(100, 100, 200);")
@@ -187,6 +189,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.lbl_textTotNumOfClsAttThisMonth.setFont(font)
         self.lbl_textTotNumOfClsAttThisMonth.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lbl_textTotNumOfClsAttThisMonth.setStyleSheet("color: rgb(100, 100, 200);")
@@ -204,6 +208,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.lbl_textTotalMonthlyFee.setFont(font)
         self.lbl_textTotalMonthlyFee.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lbl_textTotalMonthlyFee.setStyleSheet("color: rgb(100, 100, 200);")
@@ -230,6 +236,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.txt_inputHeight.setFont(font)
         self.txt_inputHeight.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
@@ -238,6 +246,7 @@ class Ui_PersonalReport(object):
 "border-radius: 8px;\n"
 "color: rgb(100, 100, 200);\n"
 "}")
+        self.txt_inputHeight.setMaxLength(10)
         self.txt_inputHeight.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.txt_inputHeight.setClearButtonEnabled(False)
         self.txt_inputHeight.setObjectName("txt_inputHeight")
@@ -251,6 +260,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.txt_inputWeight.setFont(font)
         self.txt_inputWeight.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
@@ -259,11 +270,12 @@ class Ui_PersonalReport(object):
 "border-radius: 8px;\n"
 "color: rgb(100, 100, 200);\n"
 "}")
+        self.txt_inputWeight.setMaxLength(10)
         self.txt_inputWeight.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.txt_inputWeight.setClearButtonEnabled(True)
+        self.txt_inputWeight.setClearButtonEnabled(False)
         self.txt_inputWeight.setObjectName("txt_inputWeight")
         self.verticalLayout_2.addWidget(self.txt_inputWeight)
-        self.txt_BMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.txt_BMI = QtWidgets.QLabel(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -272,16 +284,10 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.txt_BMI.setFont(font)
-        self.txt_BMI.setStyleSheet("QLineEdit {\n"
-"padding: 1px;\n"
-"border-style: solid;\n"
-"border: 2px solid gray;\n"
-"border-radius: 8px;\n"
-"color: rgb(100, 100, 200);\n"
-"}")
-        self.txt_BMI.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.txt_BMI.setClearButtonEnabled(True)
+        self.txt_BMI.setStyleSheet("color: rgb(100, 100, 200);")
         self.txt_BMI.setObjectName("txt_BMI")
         self.verticalLayout_2.addWidget(self.txt_BMI)
         self.txt_targetBMI = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
@@ -293,6 +299,8 @@ class Ui_PersonalReport(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.txt_targetBMI.setFont(font)
         self.txt_targetBMI.setStyleSheet("QLineEdit {\n"
 "padding: 1px;\n"
@@ -301,11 +309,14 @@ class Ui_PersonalReport(object):
 "border-radius: 8px;\n"
 "color: rgb(100, 100, 200);\n"
 "}")
+        self.txt_targetBMI.setMaxLength(10)
         self.txt_targetBMI.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.txt_targetBMI.setClearButtonEnabled(True)
+        self.txt_targetBMI.setClearButtonEnabled(False)
         self.txt_targetBMI.setObjectName("txt_targetBMI")
         self.verticalLayout_2.addWidget(self.txt_targetBMI)
         self.horizontalLayout.addLayout(self.verticalLayout_2)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
         self.lbl_title = QtWidgets.QLabel(PersonalReport)
         self.lbl_title.setGeometry(QtCore.QRect(190, 10, 421, 80))
         font = QtGui.QFont()
@@ -316,6 +327,33 @@ class Ui_PersonalReport(object):
         self.lbl_title.setFont(font)
         self.lbl_title.setStyleSheet("color: #9E9E9E;")
         self.lbl_title.setObjectName("lbl_title")
+        self.btn_save = QtWidgets.QPushButton(PersonalReport)
+        self.btn_save.setEnabled(False)
+        self.btn_save.setGeometry(QtCore.QRect(400, 525, 180, 50))
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(16)
+        font.setUnderline(False)
+        self.btn_save.setFont(font)
+        self.btn_save.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_save.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.btn_save.setStyleSheet("QPushButton{\n"
+"    border: 2px solid #9E9E9E;\n"
+"    border-radius: 15px;\n"
+"    background-color: #5a5a5a;\n"
+"    color: #FFFFFF;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    color: #9E9E9E;\n"
+"    background-color: #5a5a5a;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color: #9c2219;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: #2c998e;\n"
+"}")
+        self.btn_save.setObjectName("btn_save")
 
         self.retranslateUi(PersonalReport)
         QtCore.QMetaObject.connectSlotsByName(PersonalReport)
@@ -338,6 +376,7 @@ class Ui_PersonalReport(object):
         self.lbl_priceAZN.setText(_translate("PersonalReport", "AZN"))
         self.txt_inputHeight.setPlaceholderText(_translate("PersonalReport", "0"))
         self.txt_inputWeight.setPlaceholderText(_translate("PersonalReport", "0"))
-        self.txt_BMI.setPlaceholderText(_translate("PersonalReport", "0"))
+        self.txt_BMI.setText(_translate("PersonalReport", "0"))
         self.txt_targetBMI.setPlaceholderText(_translate("PersonalReport", "0"))
         self.lbl_title.setText(_translate("PersonalReport", "Personal Report"))
+        self.btn_save.setText(_translate("PersonalReport", "Save"))

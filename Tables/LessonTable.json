@@ -1,66 +1,200 @@
 [
     {
-        "date": "12/1/2021",
-        "price": "10",
-        "smallDescription": "Function",
-        "teacher": "Tural",
-        "time": "4:00 PM",
-        "type": "Programmer"
-    },
-    {
-        "date": "1/2/2021",
-        "price": "9",
-        "smallDescription": "Class",
-        "teacher": "Elvin",
+        "date": "12/5/2021",
+        "id": 1,
+        "price": "15",
+        "smallDescription": "Contentrated on improving posture and flexibility",
+        "teacher": "Aisha Jordan",
         "time": "1:00 PM",
-        "type": "Programmer"
+        "type": "Yoga"
     },
     {
-        "date": "2/2/2021",
-        "price": "11",
-        "smallDescription": "Logo",
-        "teacher": "Nermin",
+        "date": "13/5/2021",
+        "id": 2,
+        "price": "20",
+        "smallDescription": "Fast paced, cardio workout",
+        "teacher": "Melissa Stone",
+        "time": "2:00 PM",
+        "type": "Cycling"
+    },
+    {
+        "date": "14/5/2021",
+        "id": 3,
+        "price": "15",
+        "smallDescription": "Energetic dance routines that are fun and upbeat",
+        "teacher": "Emma Plane",
         "time": "3:00 PM",
-        "type": "Designer"
+        "type": "Zumba"
     },
     {
-        "date": "18/2/2021",
-        "price": "25.00",
-        "smallDescription": "Delagate",
-        "teacher": "Tural Novruzov",
-        "time": "7:00 PM",
-        "type": "Programmer"
+        "date": "15/5/2021",
+        "id": 4,
+        "price": "20",
+        "smallDescription": "Adrenaline based martial arts style",
+        "teacher": "Adam Frome",
+        "time": "4:00 PM",
+        "type": "KickBoxing"
     },
     {
-        "date": "1/1/2021",
-        "price": "10.00",
-        "smallDescription": "testdesc",
-        "teacher": "Filankes Filankesov",
-        "time": "12:00 AM",
-        "type": "Test1"
+        "date": "15/5/2021",
+        "id": 5,
+        "price": "30",
+        "smallDescription": "Improves muscle endurance in a low-impact setting",
+        "teacher": "Allie Tone",
+        "time": "5:00 PM",
+        "type": "Water Aerobics"
     },
     {
-        "date": "1/1/2021",
-        "price": "11.55",
-        "smallDescription": "test2",
-        "teacher": "test2",
-        "time": "12:00 AM",
-        "type": "test2"
+        "date": "17/5/2021",
+        "id": 6,
+        "price": "20",
+        "smallDescription": "Intense cardio based workouts",
+        "teacher": "Sam Tall",
+        "time": "6:00 PM",
+        "type": "Condintioing"
     },
     {
-        "date": "1/1/2021",
-        "price": "11.11",
-        "smallDescription": "test3",
-        "teacher": "test3",
-        "time": "12:00 AM",
-        "type": "test3"
+        "date": "18/5/2021",
+        "id": 7,
+        "price": "20",
+        "smallDescription": "Fast based, interval style, shorter routines",
+        "teacher": "John Adams",
+        "time": "1:00 PM",
+        "type": "Circuit Training"
     },
     {
-        "date": "1/1/2021",
-        "price": "112",
-        "smallDescription": "asdasdas",
-        "teacher": "sadasda",
-        "time": "12:00 AM",
-        "type": "aaa"
+        "date": "19/5/2021",
+        "id": 8,
+        "price": "25",
+        "smallDescription": "High intensity classes to push you out of your comfort zone",
+        "teacher": "Sam Tall",
+        "time": "2:00 PM",
+        "type": "Bootcamp"
+    },
+    {
+        "date": "20/5/2021",
+        "id": 9,
+        "price": "15",
+        "smallDescription": "Calming workouts aimed to improve flexibility and physical strength",
+        "teacher": "Aisha Jordan",
+        "time": "3:00 PM",
+        "type": "Pilates"
+    },
+    {
+        "date": "21/5/2021",
+        "id": 10,
+        "price": "15",
+        "smallDescription": "Fun dance routines to make working out fun",
+        "teacher": "Emma Plane",
+        "time": "4:00 PM",
+        "type": "Dance"
+    },
+    {
+        "date": "22/5/2021",
+        "id": 11,
+        "price": "15",
+        "smallDescription": "Energetic dance routines that are fun and upbeat",
+        "teacher": "Emma Plane",
+        "time": "5:00 PM",
+        "type": "Zumba"
+    },
+    {
+        "date": "23/5/2021",
+        "id": 12,
+        "price": "15",
+        "smallDescription": "Contentrated on improving posture and flexibility",
+        "teacher": "Aisha Jordan",
+        "time": "6:00 PM",
+        "type": "Yoga"
+    },
+    {
+        "date": "24/5/2021",
+        "id": 13,
+        "price": "20",
+        "smallDescription": "Intense cardio based workouts",
+        "teacher": "Sam Tall",
+        "time": "1:00 PM",
+        "type": "Conditioning"
+    },
+    {
+        "date": "25/5/2021",
+        "id": 14,
+        "price": "30",
+        "smallDescription": "Improves muscle endurance in a low-impact setting",
+        "teacher": "Allie Tone",
+        "time": "2:00 PM",
+        "type": "Water Aerobics"
+    },
+    {
+        "date": "26/5/2021",
+        "id": 15,
+        "price": "20",
+        "smallDescription": "Adrenaline based martial arts style",
+        "teacher": "Adam Frome",
+        "time": "3:00 PM",
+        "type": "KickBoxing"
+    },
+    {
+        "date": "27/5/2021",
+        "id": 16,
+        "price": "15",
+        "smallDescription": "Calming workouts aimed to improve flexibility and physical strength",
+        "teacher": "Aisha Jordan",
+        "time": "4:00 PM",
+        "type": "Pilates"
+    },
+    {
+        "date": "28/5/2021",
+        "id": 17,
+        "price": "15",
+        "smallDescription": "Fun dance routines to make working out fun",
+        "teacher": "Emma Plane",
+        "time": "5:00 PM",
+        "type": "Dance"
+    },
+    {
+        "date": "29/5/2021",
+        "id": 18,
+        "price": "20",
+        "smallDescription": "Fast based, interval style, shorter routines",
+        "teacher": "John Adams",
+        "time": "6:00 PM",
+        "type": "Circuit Training"
+    },
+    {
+        "date": "30/5/2021",
+        "id": 19,
+        "price": "20",
+        "smallDescription": "Fast paced, cardio workout",
+        "teacher": "Melissa Stone",
+        "time": "1:00 PM",
+        "type": "Cycling"
+    },
+    {
+        "date": "31/5/2021",
+        "id": 20,
+        "price": "25",
+        "smallDescription": "High intensity classes to push you out of your comfort zone",
+        "teacher": "John Adams",
+        "time": "2:00 PM",
+        "type": "Bootcamp"
+    },
+    {
+        "date": "1/6/2021",
+        "id": 21,
+        "price": "25",
+        "smallDescription": "Yoga under hot and humid contidions",
+        "teacher": "Emma Oliver",
+        "time": "3:00 PM",
+        "type": "Hot Yoga"
+    },
+    {
+        "date": "1/6/2021",
+        "id": 22,
+        "price": "35",
+        "smallDescription": "High Intensity Interval Traning",
+        "teacher": "David Doll",
+        "time": "4:00 PM",
+        "type": "HIIT"
     }
 ]
