@@ -3,27 +3,28 @@ import sys
 
 # PyQt5 modules
 from PyQt5 import QtGui
+from PyQt5 import uic
 from PyQt5.QtCore import QDate, QRegExp, QTime, Qt
-from PyQt5.QtWidgets import QApplication, QHeaderView, QLineEdit, QStyle, QMainWindow, QMessageBox, QPushButton, QTableWidgetItem, QWidget
+from PyQt5.QtWidgets import QApplication, QLineEdit, QStyle, QMainWindow, QMessageBox, QPushButton, QTableWidgetItem, QWidget
 
 
 # My Classes
-from Classes import *
+from Model import *
 from Helper.Convertor import *
 from Helper.ToastNotifier import QToaster
 
 
 # User Interfaces
-from Pages.MainPageUI import Ui_Main
-from Pages.RegistrationPageUI import Ui_Registration
-from Pages.LoginPageUI import Ui_Login
-from Pages.MemberMainPageUI import Ui_MemberMain
-from Pages.ImportantNoticesPageUI import Ui_ImportantNotices
-from Pages.PersonalReportPageUI import Ui_PersonalReport
-from Pages.LessonDescriptionPageUI import Ui_LessonDescription
-from Pages.AdminMainPageUI import Ui_AdminMain
-from Pages.AddLessonPageUI import Ui_AddLesson
-from Pages.AddNoticePageUI import Ui_AddNotice
+from View.MainPageUI import Ui_Main
+from View.RegistrationPageUI import Ui_Registration
+from View.LoginPageUI import Ui_Login
+from View.MemberMainPageUI import Ui_MemberMain
+from View.ImportantNoticesPageUI import Ui_ImportantNotices
+from View.PersonalReportPageUI import Ui_PersonalReport
+from View.LessonDescriptionPageUI import Ui_LessonDescription
+from View.AdminMainPageUI import Ui_AdminMain
+from View.AddLessonPageUI import Ui_AddLesson
+from View.AddNoticePageUI import Ui_AddNotice
 
 
 
@@ -875,7 +876,7 @@ class RegistrationPage(QWidget):
     def __init__(self, role):
         super().__init__()
         
-        self.role = role
+        self.__role = role
 
         self.ui = Ui_Registration()
         self.ui.setupUi(self)
@@ -887,7 +888,7 @@ class RegistrationPage(QWidget):
         loginPage.ui.txt_username.clear()
         loginPage.ui.txt_password.clear()
 
-        loginPage.changeRole(self.role)
+        loginPage.changeRole(self.__role)
         loginPage.setGeometry(self.geometry())
         loginPage.show()
         self.close()
@@ -914,14 +915,14 @@ class RegistrationPage(QWidget):
                                     desktop=False, timeout=2000, closable=False)
                                 return
 
-                        user = User(name,surname,birthDate,code,username,password,self.role, PersonalReport('Empty', 0,0,0,0,0,0))
+                        user = User(name,surname,birthDate,code,username,password,self.__role, PersonalReport('Empty', 0,0,0,0,0,0))
                         userObjects.append(user)
                         Convertor.writeObjectsToDatabese(userObjects, 'Tables/UserTable.json')
 
                         
                         loginPage.ui.txt_username.clear()
                         loginPage.ui.txt_password.clear()
-                        loginPage.changeRole(self.role)
+                        loginPage.changeRole(self.__role)
                         loginPage.setGeometry(self.geometry())
                         loginPage.show()
                         self.close()
@@ -958,16 +959,16 @@ class LoginPage(QWidget):
         self.ui = Ui_Login()
         self.ui.setupUi(self)
         
-        self.role = role
-        self.changeRole(self.role)
+        self.__role = role
+        self.changeRole(self.__role)
 
         self.ui.btn_back.clicked.connect(self.clickedBack)
         self.ui.btn_register.clicked.connect(self.clickedRegistration)
         self.ui.btn_sigIn.clicked.connect(self.clickedSigIn)
     
     def changeRole(self, role):
-        self.role = role
-        self.ui.lbl_title.setText(f"{self.role} Login")
+        self.__role = role
+        self.ui.lbl_title.setText(f"{self.__role} Login")
 
     def clickedBack(self):
         mainPage.setGeometry(self.geometry())
@@ -978,7 +979,7 @@ class LoginPage(QWidget):
         global registrationPage
 
         if not registrationPage:
-            registrationPage = RegistrationPage(self.role)
+            registrationPage = RegistrationPage(self.__role)
 
 
         registrationPage.ui.txt_birthDate.setDate(QDate(2000,1,1))
@@ -996,7 +997,7 @@ class LoginPage(QWidget):
 
         currentUserIndex = 0
         for user in userObjects:
-            if self.role == 'Member':
+            if self.__role == 'Member':
                 if user.role == 'Member' and self.ui.txt_username.text() == user.username and self.ui.txt_password.text() == user.password:
                     if not memberMainPage:
                         memberMainPage = MemberMainPage()
@@ -1004,7 +1005,7 @@ class LoginPage(QWidget):
                     memberMainPage.show()
                     self.close()
                     break
-            elif self.role == 'Admin':
+            elif self.__role == 'Admin':
                 if user.role == 'Admin' and self.ui.txt_username.text() == user.username and self.ui.txt_password.text() == user.password:
                     if not memberMainPage:
                         adminMainPage = AdminMainPage(False, False)
@@ -1028,6 +1029,8 @@ class MyApp(QMainWindow):
         
         self.ui = Ui_Main()
         self.ui.setupUi(self)
+
+        #uic.loadUi('UI/MainPageUI.ui', self)
 
         self.ui.btn_member.clicked.connect(self.clickedLogin)
         self.ui.btn_admin.clicked.connect(self.clickedLogin)

@@ -1,27 +1,9 @@
 [
     {
-        "birthDate": "1/1/2000",
-        "code": "a",
-        "name": "a",
-        "password": "",
-        "personalReport": {
-            "BMI": 0.55,
-            "TotNumOfClsAttThisMonth": 20,
-            "inputHeight": 2.01,
-            "inputWeight": 2.24,
-            "lastClassAttended": "Zumba",
-            "targetBMI": 13.0,
-            "totalMonthlyFee": 347.65
-        },
-        "role": "Member",
-        "surname": "a",
-        "username": ""
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "a",
-        "name": "a",
-        "password": "",
+        "birthDate": "1/1/2003",
+        "code": "123",
+        "name": "Zarifa",
+        "password": "ZarifaZarifa",
         "personalReport": {
             "BMI": 0,
             "TotNumOfClsAttThisMonth": 0,
@@ -32,205 +14,25 @@
             "totalMonthlyFee": 0
         },
         "role": "Admin",
-        "surname": "a",
-        "username": ""
+        "surname": "Huseynli",
+        "username": "Zarifa"
     },
     {
-        "birthDate": "1/1/2000",
-        "code": "m",
-        "name": "m",
-        "password": "m",
+        "birthDate": "11/11/2001",
+        "code": "321",
+        "name": "User",
+        "password": "UserUser",
         "personalReport": {
-            "BMI": 0.16,
+            "BMI": 0,
             "TotNumOfClsAttThisMonth": 1,
-            "inputHeight": 12.0,
-            "inputWeight": 23.0,
-            "lastClassAttended": "Water Aerobics",
-            "targetBMI": 11.0,
-            "totalMonthlyFee": 30.0
+            "inputHeight": 0,
+            "inputWeight": 0,
+            "lastClassAttended": "Bootcamp",
+            "targetBMI": 0,
+            "totalMonthlyFee": 25.0
         },
         "role": "Member",
-        "surname": "m",
-        "username": "m"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "mm",
-        "name": "mm",
-        "password": "mm",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Member",
-        "surname": "mm",
-        "username": "mm"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "a",
-        "name": "a",
-        "password": "a",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "a",
-        "username": "a"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "sss",
-        "name": "sss",
-        "password": "sss",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "sss",
-        "username": "sss"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "aaa",
-        "name": "asd",
-        "password": "aaa",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "asda",
-        "username": "aaa"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "ttt",
-        "name": "ttt",
-        "password": "ttt",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "ttt",
-        "username": "ttt"
-    },
-    {
-        "birthDate": "4/4/2004",
-        "code": "ttttt",
-        "name": "ttttt",
-        "password": "ttttt",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Member",
-        "surname": "ttttt",
-        "username": "ttttt"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "t",
-        "name": "t",
-        "password": "t",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Member",
-        "surname": "t",
-        "username": "t"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "asd",
-        "name": "asd",
-        "password": "asd",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "asd",
-        "username": "asd"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "aaa",
-        "name": "aaa",
-        "password": "aaa",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "aaa",
-        "username": "aaaa"
-    },
-    {
-        "birthDate": "1/1/2000",
-        "code": "bb",
-        "name": "bbb",
-        "password": "bbbbbbbb",
-        "personalReport": {
-            "BMI": 0,
-            "TotNumOfClsAttThisMonth": 0,
-            "inputHeight": 0,
-            "inputWeight": 0,
-            "lastClassAttended": "Empty",
-            "targetBMI": 0,
-            "totalMonthlyFee": 0
-        },
-        "role": "Admin",
-        "surname": "bbb",
-        "username": "bbb"
+        "surname": "Userly",
+        "username": "User"
     }
 ]

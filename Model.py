@@ -1,5 +1,3 @@
-import json
-
 class User():
     def __init__(self, name, surname, birthDate, code, username, password, role, personalReport):
         self.name = name
